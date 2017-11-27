@@ -1,0 +1,13 @@
+/* pages/integral/integral.wxss */
+.order-m1{height: 70rpx;background: #fff;border-top: 1px solid #eee;border-bottom: 1px solid #eee;display: flex;flex-direction: row;width: 100%;position: fixed;top: 0;left: 0;z-index: 10;}
+.order-m1-1{width: 50%;height: 70rpx;line-height: 70rpx;text-align: center;font-size: 24rpx;color: #333;box-sizing: border-box;}
+.order-on{border-bottom: 5rpx solid #ee6817;}
+.inte-m0{margin-top: 70rpx;}
+.inte-m1{padding: 20rpx;border-bottom: 1px solid #eee;display: flex;flex-direction: row;}
+.inte-m2{width: 160rpx;margin-left: 20rpx;text-align: right;}
+.inte-m2 text{font-size: 24rpx;color: #ee6817;}
+.inte-m3{width: 530rpx;}
+.inte-m3-1{font-size: 24rpx;color: #333;}
+.inte-m3-2{font-size: 24rpx;color: #999;margin-top: 10rpx;}
+.tishi-inte{font-size: 24rpx;line-height: 150rpx;text-align: center;display: block;width: 100%;}
+

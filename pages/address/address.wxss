@@ -1,0 +1,40 @@
+/* pages/address/address.wxss */
+page{background: #eee;}
+.address-m1{height: 120rpx;border-top: 1px solid #eee;background: #fff;padding: 20rpx;width: 710rpx;display: flex;flex-direction: row;}
+.address-m2{width: 650rpx;display: flex;flex-direction: row;}
+.address-m2-ding{width: 60rpx;height: 60rpx;display: flex;flex-direction: column;background:url('https://jingcheng668.com/static/8-1.png')no-repeat left;background-size:70%;margin-top: 30rpx;}
+.address-m2-dingon{background:url('https://jingcheng668.com/static/8-4.png')no-repeat left;background-size:70%;}
+.address-m2-ding2{width: 590rpx;display: flex;flex-direction: column;}
+.address-m2-2{font-size: 26rpx;color: #333;line-height: 50rpx;}
+.address-m2-2 text{margin-left: 20rpx;}
+.address-m2-3{font-size: 24rpx;color: #666;height: 70rpx;line-height: 35rpx;width: 100%;overflow: hidden;}
+.address-m3{width: 50rpx;text-align: center;}
+.address-m3 image{width: 42rpx;height: 42rpx;margin-top: 39rpx;}
+.car-t1 {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 160rpx;
+}
+.car-t2 {
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.car-t2 image {
+    width: 30rpx;
+    height: 30rpx;
+    margin-right:10rpx;
+    margin-top:18rpx;
+
+}
+.diandi{height: 160rpx;width: 100%;background: none;}
+.mem-m6{height: 100rpx;position: fixed;left:0;bottom:0;width: 100%;background: #ee6817;font-size: 30rpx;color: #fff;line-height: 100rpx;text-align: center;display: flex;flex-direction: row;justify-content: center;}
+.mem-m6 image{width: 32rpx;height: 31rpx;margin-top: 35rpx;margin-right:10rpx;}

@@ -1,0 +1,44 @@
+<!--pages/insurance/insurance.wxml-->
+<view class="container">
+    <view class='store-nav'>
+        <view class='store-nav1' bindtap='selectCat' data-status="{{b_status}}">
+            <text>银行</text>
+            <image class='store-nav1-img0' src='{{url}}/static/4-6.png'></image>
+        </view>
+        <view class='store-nav1' bindtap='getnf' data-static="{{money_w}}">
+            <text>年费</text>
+            <image class='store-nav1-img1' src='{{url}}/static/1_2.png'></image>
+        </view>
+    </view>
+    <view class='drawer_screen' bindtap='selectCat' data-status="0" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+        <block wx:for="{{yinhangData}}" wx:for-index="i" wx:for-item="v">
+            <view class='store-dz' bindtap='getyh' data-id="{{v.id}}">{{v.name}}</view>
+        </block>
+    </view>
+    <view class='store-m5'>
+        <view wx:if="{{!xykList}}" class='order-m2'>
+            <text class='tishixinxi'>暂无数据信息</text>
+        </view>
+        <view wx:if="{{!xykList}}" class='store-m1'>暂无数据</view>
+        <block wx:for="{{xykList}}" wx:for-index="i" wx:for-item="v">
+
+            <view class='store-m1'>
+                <view class='store-m2'>
+                    <image src='{{url}}{{v.path}}'></image>
+                </view>
+                <view class='store-m3'>
+                    <text class='store-m1-te1'>{{v.name}}</text>
+                    <view class='store-m4-1'>
+                        ￥{{v.annual_fee}}
+                    </view>
+                    <view class='store-m4-2'>
+                        {{v.description}}
+                    </view>
+                </view>
+                <navigator url='/pages/sub_card/sub_card?id={{v.id}}' class='store-m6'>立即申请</navigator>
+            </view>
+
+        </block>
+    </view>
+</view>

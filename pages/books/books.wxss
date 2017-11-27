@@ -1,0 +1,171 @@
+/* pages/books/books.wxss */
+
+page {
+    background: #f3f3f3;
+}
+
+.book-m1 {
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+}
+
+.book-m1-1 {
+    width: 50%;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 24rpx;
+    color: #333;
+    text-align: center;
+    font-weight: 700;
+}
+
+.book-m1on {
+    width: 50%;
+    border-bottom: 5rpx solid #ee6817;
+    box-sizing: border-box;
+    color: #ee6817;
+}
+
+.order-m2 {
+    margin-top: 10rpx;
+    background: #fff;
+    width: 100%;
+    position: relative;
+}
+
+.order-m3 {
+    height: 60rpx;
+    border-bottom: 1px solid #eee;
+    line-height: 60rpx;
+    padding: 0 20rpx;
+    width: 710rpx;
+}
+
+.order-te1 {
+    font-size: 22rpx;
+    color: #999;
+    float: left;
+}
+
+.order-te2 {
+    font-size: 22rpx;
+    color: #ee6817;
+    float: right;
+}
+
+.order-te2 image {
+    width: 34rpx;
+    height: 34rpx;
+    margin: 30rpx 0 30rpx 20rpx;
+}
+
+.order-te5 {
+    font-size: 22rpx;
+    color: #999;
+    float: right;
+}
+
+.order-m4 {
+    padding: 0 20rpx;
+}
+
+.order-m67 {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #eee;
+    padding: 20rpx 0;
+}
+
+.order-m4-1 {
+    padding: 20rpx;
+    display: flex;
+    flex-direction: row;
+    background: #f9f5f5;
+}
+
+.order-m6 {
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.order-m6 image {
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.order-m6-1 {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.order-m6-1 image {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.order-m7 {
+    width: 580rpx;
+    margin-left: 20rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.order-te3 {
+    font-size: 24rpx;
+    color: #333;
+    line-height: 30rpx;
+    width: 580rpx;
+    height: 30rpx;
+    overflow: hidden;
+    font-weight: 700;
+}
+
+.order-te4 {
+    font-size: 22rpx;
+    color: #666;
+}
+
+.order-m5 {
+    padding: 0 20rpx;
+    background: #fff;
+}
+
+.order-a1 {
+    float: right;
+    width: 150rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 24rpx;
+    color: #033;
+    border: 1px solid #eee;
+    border-radius: 5rpx;
+    text-align: center;
+    margin: 20rpx 0;
+}
+
+.order-m8 {
+    width: 116rpx;
+    height: 92rpx;
+    position: absolute;
+    right: 130rpx;
+    top: 0;
+}
+
+.order-m8 image {
+    width: 116rpx;
+    height: 92rpx;
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+.order-m22{line-height: 150rpx;text-align: center;width: 100%;background: #fff;font-size: 24rpx;}
+.order-m2-a1{font-size: 24rpx;line-height: 150rpx;display: inline-block;color: #ee6817;margin-left: 5rpx;}

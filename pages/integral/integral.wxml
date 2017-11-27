@@ -1,0 +1,31 @@
+<!--pages/integral/integral.wxml-->
+<view class='container'>
+    <view class='order-m1'>
+        <view class="order-m1-1 {{type == 1 ? 'order-on':''}}" bindtap='selectscore' data-status="1">
+            积分收入
+        </view>
+        <view class="order-m1-1 {{type == 2 ? 'order-on':''}}" bindtap='selectscore' data-status="2">
+            积分消费
+        </view>
+    </view>
+
+    <view class='inte-m0'>
+        <block wx:for="{{scoreList}}" wx:for-index="i" wx:for-item="v">
+            <view class='inte-m1'>
+                <view class='inte-m3'>
+                    <view class='inte-m3-1'>{{v.gname}}</view>
+                    <view class='inte-m3-2'>{{v.created}}</view>
+                </view>
+                <view class='inte-m2'>
+                    <text wx:if="{{type == 1}}">+{{v.score}}积分</text>
+                    <text wx:if="{{type == 2}}">-{{v.score}}积分</text>
+                </view>
+            </view>
+        </block>
+        <view wx:if="{{!scoreList}}" class='inte-m1'>
+            <text class='tishi-inte'>亲、您还没有积分记录哦···</text>
+        </view>
+    </view>
+
+    
+</view>

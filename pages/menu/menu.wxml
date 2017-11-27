@@ -1,0 +1,88 @@
+<!--pages/menu/menu.wxml-->
+<view class="main">
+    <scroll-view scroll-y class="pro-left">
+
+        <view class="pro-left-1 pro-on1">
+            <view class="pro-left-2 {{cur_id == 0 ? 'pro-on' :' ' }}" bindtap='changecat' data-id="0">
+                为您推荐
+            </view>
+        </view>
+        
+        <view class="pro-left-1" wx:for="{{pmenu}}" wx:for-index="i" wx:for-item="v">
+            <view bindtap='changecat' data-id="{{v.cat_id}}" class="pro-left-2 {{cur_id == v.cat_id ? 'pro-on' :' ' }} ">
+                {{v.name}}
+            </view>
+        </view>
+        <view class="pro-left-1 pro-on1">
+            <view class="pro-left-2 {{cur_id == -1 ? 'pro-on' :' ' }}" bindtap='changecat' data-id="-1">
+                增值服务
+            </view>
+        </view>
+
+    </scroll-view>
+    <!-- <view class="pro-right2">
+         <view class='pro-right1'>
+            <view class='pro-right1-1'>精品车饰</view>
+            <view class='pro-right1-2'> 
+                <block wx:for="{{child}}">
+                    <navigator url='/pages/products/products?cat_id={{item.cat_id}}' class='menu-li1'>
+                        <view class='menu-img1'>
+                            <image src='{{url}}{{item.path}}'></image>
+                        </view>
+                        <text>{{item.name}}</text>
+                    </navigator>
+                </block>
+             </view>
+             <view class='pro-right1-1'>打牌配件</view>
+            <view class='pro-right1-2'> 
+                <block wx:for="{{child}}">
+                    <navigator url='/pages/products/products?cat_id={{item.cat_id}}' class='menu-li1'>
+                        <view class='menu-img1'>
+                            <image src='{{url}}{{item.path}}'></image>
+                        </view>
+                        <text>{{item.name}}</text>
+                    </navigator>
+                </block>
+             </view>
+        </view> 
+    </view> -->
+    <view class="pro-right">
+        <!--增值服务-列表-->
+        <view class='jing-xmain' wx:if="{{cur_id == -1}}">
+            <navigator url='/pages/insurance/insurance' hover-class='none' class='menu-li1'>
+                <view class='menu-img1'><image  src='{{url}}/static/1_3.png'></image></view>
+                <text>保险服务</text>
+            </navigator>
+            <navigator url='/pages/c_card/c_card' hover-class='none' class='menu-li1'>
+                <view class='menu-img1'><image  src='{{url}}/static/1_4.png'></image></view>
+                <text>信用卡服务</text>
+            </navigator>
+            <navigator url='/pages/loan/loan' hover-class='none' class='menu-li1'>
+                <view class='menu-img1'><image  src='{{url}}/static/1_5.png'></image></view>
+                <text>贷款服务</text>
+            </navigator>
+            <navigator url='/pages/swap/swap' hover-class='none' class='menu-li1'>
+                <view class='menu-img1'><image  src='{{url}}/static/1_6.png'></image></view>
+                <text>车辆置换</text>
+            </navigator>
+        </view>
+        <!-- <navigator hover-class='none' url='/pages/products/products' class='menu-li1'>
+            <view class='menu-img1'>
+                <image src='{{url}}/static/1-14.jpg'></image>
+            </view>
+            <text>测试1</text>
+        </navigator> -->
+        <!-- 循环 -->
+        <block wx:for="{{child}}">
+            <navigator hover-class='none' url='/pages/products/products?cat_id={{item.cat_id}}' class='menu-li1'>
+                <view class='menu-img1'>
+                    <image src='{{url}}{{item.path}}'></image>
+                </view>
+                <text>{{item.name}}</text>
+            </navigator>
+        </block>
+        <!-- 循环结束 -->
+    </view>
+
+
+</view>

@@ -1,0 +1,48 @@
+<!--pages/insurance/insurance.wxml-->
+<view class="container">
+    <view class='store-nav'>
+        <view class='store-nav1' bindtap='selectCat' data-status="{{c_status}}">
+            <text>公司</text>
+            <image src='{{url}}/static/4-6.png'></image>
+        </view>
+        <view class='store-nav1' bindtap='selectCat2' data-status="{{x_status}}">
+            <text>险种</text>
+            <image src='{{url}}/static/4-6.png'></image>
+        </view>
+    </view>
+    <view class='drawer_screen' bindtap='selectCat' data-status="0" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+        <block wx:for="{{gsData}}" wx:for-index="i" wx:for-item="v">
+            <view class='store-dz' bindtap='getgs' data-cid="{{v.id}}">{{v.name}}</view>
+        </block>
+    </view>
+
+    <view class='drawer_screen' bindtap='selectCat2' data-status="0" wx:if="{{showModalStatus2}}"></view>
+    <view animation="{{animationData2}}" class="drawer_attr_box" wx:if="{{showModalStatus2}}">
+        <block wx:for="{{xzData}}" wx:for-index="i" wx:for-item="v">
+            <view class='store-dz' bindtap='getxz' data-iid="{{v.id}}">{{v.name}}</view>
+        </block>
+    </view>
+
+    <view class='store-m5'>
+        <view wx:if="{{!baoxianList}}" class='order-m2'>
+            <text class='tishixinxi'>暂无数据信息</text> 
+        </view>
+         <block wx:if="{{baoxianList}}" wx:for="{{baoxianList}}" wx:for-index="i" wx:for-item="v"> 
+
+            <view class='store-m1'>
+                <view class='store-m2'>
+                    <image wx:if="{{v.path}}" src='{{url}}{{v.path}}'></image>
+                </view>
+                <view class='store-m3'>
+                    <text class='store-m1-te1'>{{v.name}}</text>
+                    <view class='store-m4'>
+                        {{v.description}}
+                    </view>
+                </view>
+                <navigator url='/pages/sub_insurance/sub_insurance?id={{v.id}}' class='store-m6'>立即申请</navigator>
+            </view>
+            
+         </block> 
+    </view>
+</view>

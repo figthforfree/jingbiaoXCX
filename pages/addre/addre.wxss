@@ -1,0 +1,13 @@
+/* pages/addre/addre.wxss */
+page{background: #eee;}
+.addre-main{width: 100%;}
+.addre-m1{height: 45rpx;padding: 20rpx;border-top: 1px solid #eee;line-height: 45rpx;display: flex;flex-direction: row;background: #fff;flex-wrap: wrap;}
+.addre-m1 text{font-size: 26rpx;color: #333;}
+.addre-m1 input{font-size: 22rpx;color: #999;height: 45rpx;line-height: 45rpx;}
+.mem-in1{line-height: 55rpx;height: 55rpx;font-size: 28rpx;color: #999;}
+.addre-m1-1{width: 20%;}
+.addre-m1-2{width: 80%;}
+.mem-m6{height: 100rpx;position: fixed;left:0;bottom:0;width: 100%;background: #ee6817;font-size: 30rpx;color: #fff;line-height: 100rpx;text-align: center;}
+.section{font-size: 22rpx;color: #999;}
+.addre-m1-0{height: 45rpx;text-align: center;}
+.addre-m1-0 image{width: 26rpx;height: 14rpx;margin-left: 10rpx;margin-bottom:10rpx;}

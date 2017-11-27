@@ -1,0 +1,12 @@
+/* pages/assess/assess.wxss */
+page{background: #f3f3f3;}
+.pingjia-top{display: flex;flex-direction: row;width: 100%;}
+.pingjiaimg{height: auto;display: flex;flex-direction: column;padding: 0 20rpx;}
+.pingjiaimg-m1{width: 60rpx;height: 60rpx;border:1px solid #999;text-align: center;line-height: 60rpx;font-size: 40rpx;color: #999;}
+.pingjia-main{width: 100%;background: #fff;display: flex;flex-direction: column;}
+.pingjia-m1{margin: 0 20rpx 20rpx 20rpx;border: 1px solid #eee;width: 690rpx;border-radius: 10rpx;padding: 10rpx;font-size: 30rpx;}
+.tishi-te1{line-height: 60rpx;font-size: 24rpx;margin-left: 10rpx;color: #999;}
+.pingjiaimg-main{display: flex;flex-direction: row;flex-wrap: wrap;margin-top: 20rpx;}
+.pingjiaimg-img1{width: 200rpx;height: 200rpx;margin:0 20rpx 20rpx 0;}
+.pingjia-m2{width: 200rpx;height: 60rpx;line-height: 60rpx;border:1px solid #ee6817;background: #ee6817;font-size: 24rpx;color: #fff;text-align: center;border-radius: 5rpx;margin-bottom: 20rpx;}
+.pingjia-tj{display: flex;flex-direction: row;justify-content: flex-end;padding: 0 20rpx;}

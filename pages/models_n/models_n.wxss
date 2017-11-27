@@ -1,0 +1,9 @@
+/* pages/models_n/models_n.wxss */
+.container{width: 100%;}
+.select-m1{height: 60rpx;line-height: 60rpx;padding: 0 20rpx;display: flex;flex-direction: row;width: 710rpx;border-top: 1px solid #eee;font-size: 24rpx;font-weight: 700;}
+.select-m1 image{width: 50rpx;height: 50rpx;margin: 5rpx 20rpx 0 0;}
+.select-m2{background: #eee;font-size: 24rpx;color: #333;height: 60rpx;line-height: 60rpx;padding: 0 20rpx;border-bottom: 1px solid #eee;width: 710rpx;display: flex;flex-direction: row;}
+.select-m2 image{width: 10rpx;height: 15rpx;margin: 22rpx;}
+.models-te1{font-size: 24rpx;color: #ee6817;}
+.models-te2{font-size: 24rpx;color: #333;}
+.select-m3{height: 80rpx;line-height: 80rpx;margin-left: 20rpx;width: 730rpx; display: flex;flex-direction: row;border-bottom: 1px solid #eee;font-size: 24rpx;color: #333;}

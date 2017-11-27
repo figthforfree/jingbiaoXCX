@@ -1,0 +1,57 @@
+<!--pages/mycar/mycar.wxml-->
+<view class='container'>
+    <view class='car-m0'>
+        <block wx:for="{{userCarList}}" wx:for-index="i" wx:for-item="v">
+            <view class='car-m1' >
+            <!-- bindtouchstart="mytouchstart" bindtouchend="mytouchend" bindtap="editAddress" -->
+                <view class='zhifu-m0'>
+                    <view  class="car-m3 {{v.is_check == 6? 'car-m3on':''}}"></view>
+                    <view class='car-m2' bindtap='gopailiang' bindlongpress="longpress"  data-index="{{i}}" data-id="{{v.id}}" data-isc="{{v.is_check}}">
+                        <view class='car-m4'>
+                            <image src='{{url}}{{v.path}}'></image>
+                        </view>
+                        <view class='car-m5'>
+                            <text class='car-m5-te1'>{{v.brand_name}}</text>
+                            <text class='car-m5-te2'>{{v.model_name}}</text>
+                        </view>
+                        <view class='car-m6'>
+                            <text wx:if="{{!v.driving_3 || !v.driving_2 || !v.driving_1 || v.is_check==1}}">信息不完整</text>
+                            <text wx:if="{{v.is_check==2}}" >审核中</text>
+                            <text wx:if="{{v.is_check==3}}" >审核未通过</text>
+                            <image wx:if="{{!v.is_qualification}}" src='{{url}}/static/wrz.png'></image>
+                            <image wx:if="{{v.is_qualification}}" src='{{url}}/static/yrz.png'></image>
+                        </view>
+                    </view>
+                </view>
+
+                <view class='zhifu-m1' wx:if="{{v.is_qualification}}">
+                    <text class='zhi-te1'>订单编号:{{v.order_num}}</text>
+                    <text class='zhi-te2'>￥{{v.price}}</text>
+                </view>
+            </view>
+        </block>
+
+        <!-- <view class='car-m1'>
+            <view class='car-m2'>
+                <view class='car-m4'>
+                    <image src='../../img/1-24.png'></image>
+                </view>
+                <view class='car-m5'>
+                    <text class='car-m5-te1'>一汽大众奥迪—A6——2005年生产</text>
+                    <text class='car-m5-te2'>2002款 2.8L 手动 豪华舒适型</text>
+                </view>
+            </view>
+            <view class='car-m3' style='background:url({{url}}/static/8-1.png)no-repeat right;background-size:70%;'>
+            </view>
+        </view> -->
+
+    </view>
+    <view class='diandi'></view>
+    <view class='car-t1'>
+        <view class='car-t2'>
+            <view><image src='{{url}}/static/8-2.png'></image></view>
+            <text>长按可以删除车辆</text>
+        </view>
+        <navigator url='/pages/models/models' class='mem-m6' >添加爱车</navigator>
+    </view>
+</view>

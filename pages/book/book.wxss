@@ -1,0 +1,20 @@
+/* pages/book/book.wxss */
+.book-m1{background: #f3f3f3;height: 170rpx;padding-bottom:10rpx;border-top: 1px solid #eee;width: 100%;}
+.book-m2{height: 130rpx;background: #fff;padding: 20rpx;display: flex;flex-direction: row;}
+.book-m2-1{width: 130rpx;height: 130rpx;}
+.book-m2-1 image{width: 130rpx;height: 130rpx;}
+.book-m2-2{display: flex;flex-direction: column;width: 560rpx;margin-left: 20rpx;}
+.book-m2-3{line-height: 40rpx;}
+.book-te1{font-size: 24rpx;line-height: 40rpx;height: 40rpx;color: #333;font-weight: 700;}
+.book-te2{font-size: 24rpx;line-height: 40rpx;height: 40rpx;color: #999;float: right;}
+.book-m2-4{display: flex;flex-direction: row;}
+.book-m2-5{font-size: 22rpx;color: #999;line-height: 30rpx;width: 96%; }
+.book-m2-6 image{width: 16rpx;height: 26rpx;}
+.book-m3{width: 100%}
+.book-m1-a1{padding: 0 20rpx;border-bottom: 1px solid #eee;font-size: 24rpx;color: #333;font-weight: 700;height: 85rpx;line-height: 85rpx;}
+.book-m1-a1-img{width: 16rpx;height: 26rpx;float: right;margin-top: 30rpx;}
+
+.car-t1{position: fixed;left:0;bottom:0;width: 100%;height: 160rpx;}
+.car-t2{height: 60rpx;line-height: 60rpx;text-align: center;font-size: 24rpx;color: #333;display: flex;flex-direction: row;justify-content: center;}
+.car-t2 image{width: 30rpx;height: 30rpx;margin-right: 10rpx;margin-top: 18rpx;}
+.mem-m6{height: 100rpx;width: 100%;background: #ee6817;font-size: 30rpx;color: #fff;line-height: 100rpx;text-align: center;}

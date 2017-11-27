@@ -1,0 +1,26 @@
+<!--pages/swap/swap.wxml-->
+<view class="container">
+    <view class='store-m5'>
+         <block wx:for="{{swapList}}" wx:for-index="i" wx:for-item="v"> 
+
+            <view class='store-m1'>
+                <view class='store-m2'>
+                    <image src='{{url}}{{v.path}}'></image>
+                </view>
+                <view class='store-m3'>
+                    <text class='store-m1-te1'>{{v.name}}</text>
+                    <view class='store-m4-1'>
+                        品牌：{{v.car_name}}
+                    </view>
+                    <view class='store-m4-2'>
+                        地址：{{v.address}}
+                    </view>
+                </view>
+                <navigator url='/pages/sub_swap/sub_swap?id={{v.id}}' class='store-m6'>立即申请</navigator>
+            </view>
+
+            
+         </block> 
+    </view>
+</view>
+

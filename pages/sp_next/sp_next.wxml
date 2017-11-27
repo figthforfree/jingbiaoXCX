@@ -1,0 +1,15 @@
+<!--pages/sp_next/sp_next.wxml-->
+<view class='sp-nmain'>
+    <view class='sp-n1' wx:if="{{Subordinate}}" wx:for="{{Subordinate}}">
+        <view class='sp-n1-1'>
+            <view class='sp-n1-3'><image src='{{item.headimg}}'></image></view>
+            <view class='sp-n1-4'>{{item.nickname}}</view>
+        </view>
+        <view class='sp-n1-2'>{{item.created}}</view>
+    </view>
+
+    <!--没有数据-->
+    <view wx:if="{{!Subordinate[0]}}" class='order-m2'>
+            <text class='tishixinxi'>暂无数据信息</text>
+        </view>
+</view>

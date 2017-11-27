@@ -1,0 +1,9 @@
+/* pages/sp_next/sp_next.wxss */
+.sp-nmain{border-top: 1px solid #eee;}
+.sp-n1{padding: 20rpx;display: flex;flex-direction: row;justify-content: space-between;border-bottom: 1px solid #eee;}
+.sp-n1-1{display: flex;flex-direction: row;}
+.sp-n1-3 image{width: 80rpx;height: 80rpx;border-radius: 50%;margin-right: 20rpx;}
+.sp-n1-4{height: 80rpx;line-height: 80rpx;font-size: 28rpx;color: #333;width: 420rpx;overflow: hidden;}
+.sp-n1-2{height: 80rpx;line-height: 80rpx;font-size: 24rpx;color: #b0b0b0;}
+.order-m2{margin-top: 10rpx;background: #fff;width: 100%;position: relative;}
+.tishixinxi{height: 150rpx;width: 100%;text-align: center;font-size: 24rpx;line-height: 150rpx;display: inline-block;}

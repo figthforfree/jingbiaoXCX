@@ -1,0 +1,10 @@
+/* pages/spread/spread.wxss */
+page{background: #eee;}
+.tui-main{background: #fff;padding: 20rpx;margin: 20rpx;border-radius: 5px;height: 100%;}
+.tui-m1{width: 180rpx;height: 180rpx;margin: 120rpx auto 20rpx;}
+.tui-m1 image{width: 180rpx;height: 180rpx;border-radius: 50%;}
+.tui-m2{font-size: 40rpx;color: #333;text-align: center;width: 100%;}
+.tui-m3{font-size: 28rpx;color: #ff0000;text-align: center;width: 100%;margin: 30rpx auto 40rpx;}
+.tui-m4{width: 510rpx;height: 510rpx;margin: 0 auto;}
+.tui-m4 image{width: 510rpx;height: 510rpx;}
+.tui-m5{font-size: 28rpx;color: #333;text-align: center;width: 100%;margin: 30rpx auto 40rpx;}

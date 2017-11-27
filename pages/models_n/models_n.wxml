@@ -1,0 +1,18 @@
+<!--pages/models_n/models_n.wxml-->
+<view class='container'>
+    <view class='select-m1'>
+        <image src='{{url}}{{brand.path}}'></image>
+        <text>{{brand.brand_name}}</text>
+    </view>
+    <view class='select-m2'>
+        <text class='models-te1'>{{pl_name}}</text>
+        <image src='{{url}}/static/7-11.png'></image>
+        <text class='models-te2'>选择生产年份</text>
+    </view>
+    <block wx:for="{{nianfen}}">
+        <view bindtap='xuancx' class='select-m3' data-id="{{item.id}}">
+            <text>{{item.name}}</text>
+        </view>
+    </block>
+</view>
+

@@ -1,0 +1,134 @@
+/* pages/seckill/seckill.wxss */
+.kong{width: 100%;text-align: center;}
+.kong image{width: 390rpx;height: 445rpx;margin: 20% auto 0;}
+.kong text{font-size: 30rpx;color: #666;margin-top: 20rpx;display: block;}
+swiper{height: 285rpx;}
+.seckill-banner {
+    height: 285rpx;
+    width: 100%;
+}
+
+.seckill-banner image {
+    height: 285rpx;
+    width: 100%;
+}
+
+.slide-image{width: 100%;height: 338rpx;}
+
+.seckill-m1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.seckill-m1-1 {
+    width: 25%;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 24rpx;
+    color: #fff;
+    text-align: center;
+    background-color: #999;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+    box-sizing: border-box;
+}
+
+.seckill-m1-1:nth-child(1) {
+    border-left: 0;
+}
+
+.seckill-m1-1:nth-child(5) {
+    border-left: 0;
+}
+
+.seckill-m1-on {
+    background-color: #ee6817;
+}
+
+.seckill-m2 {
+    padding: 20rpx;
+}
+
+.seckill-m2-top {
+    height: 115rpx;
+    width: 100%;
+    text-align: center;
+    line-height: 115rpx;
+    font-size: 30rpx;
+    color: #333;
+}
+.seckill-m2-top text{padding-left: 75rpx;}
+
+.seckill-m2-1 {
+    display: flex;
+    flex-direction: column;
+    border-top: 5rpx solid #ee6817;
+}
+
+.seckill-m2-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30rpx 0;
+    border-bottom: 1px solid #eee;
+}
+
+.seckill-m2-te1 {
+    font-size: 26rpx;
+    color: #333;
+    height: 120rpx;
+    line-height: 30rpx;
+}
+
+.seckill-m2-te2 {
+    font-size: 32rpx;
+    color: #ee6817;
+    line-height: 40rpx;
+    padding-left: 50rpx;
+}
+
+.seckill-m2-te2 text {
+    font-size: 20rpx;
+    color: #999;
+    padding-left: 20rpx;
+}
+
+.seckill-m2-4 {
+    width: 160rpx;
+    height: 160rpx;
+}
+
+.seckill-m2-4 image {
+    width: 160rpx;
+    height: 160rpx;
+}
+
+.seckill-m2-5 {
+    width: 530rpx;
+    margin-left: 20rpx;
+}
+
+.seckill-m2-3 {
+    padding: 20rpx 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.seckill-m2-3 text {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.seckill-m2-a1 {
+    width: 115rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #ee6817;
+    border: 1px solid #ee6817;
+    border-radius: 5rpx;
+}

@@ -1,0 +1,138 @@
+/* pages/store/store.wxss */
+.kong{width: 100%;text-align: center;}
+.kong image{width: 390rpx;height: 445rpx;margin: 20% auto 0;}
+.kong text{font-size: 30rpx;color: #666;margin-top: 20rpx;display: block;}
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 90rpx;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+.drawer_attr_box {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 92rpx;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+}
+
+.store-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.store-nav1 {
+  width: 50%;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 24rpx;
+  color: #333;
+  text-align: center;
+  border-left: 1px solid #eee;
+  box-sizing: border-box;
+}
+
+.store-nav1:nth-child(1) {
+  border-left: 0;
+}
+
+.store-nav1 image {
+  width: 23rpx;
+  height: 14rpx;
+  margin: 38rpx 0 0 15rpx;
+}
+
+.store-m1 {
+  height: auto;
+  padding: 20rpx;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: row;
+}
+.store-dz{height: 90rpx;line-height: 90rpx;border-bottom: 1px solid #eee;font-size: 24rpx;color: #333;margin-left: 20rpx;padding-left: 40rpx;}
+
+.store-m5 {
+  margin-top: 90rpx;
+}
+
+.store-m2 {
+  width: 130rpx;
+  height: 130rpx;
+}
+
+.store-m2 image {
+  width: 130rpx;
+  height: 130rpx;
+}
+
+.store-m3 {
+  width: 560rpx;
+  padding-left: 20rpx;
+}
+
+.store-m1-te1 {
+  display: block;
+  width: 100%;
+  height: 35rpx;
+  font-size: 26rpx;
+  color: #333;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.store-m1-te2 {
+  font-size: 24rpx;
+  color: #333;
+}
+
+.store-m1-te3 {
+  font-size: 24rpx;
+  color: #ee6718;
+  margin-right: 10rpx;
+}
+
+.store-m1-te4 {
+  font-size: 24rpx;
+  color: #333;
+  padding-left: 10rpx;
+  border-left: 1px solid #eee;
+}
+
+.store-m1-te5 {
+  font-size: 24rpx;
+  color: #666;
+  width: 80%;
+  height: 40rpx;
+  overflow: hidden;
+  display: inline-block;
+  float: left;
+}
+
+.store-m1-te6 {
+  font-size: 22rpx;
+  color: #999;
+  float: right;
+}
+
+.store-m4 {
+  width: 100%;
+  height: 40rpx;
+  overflow: hidden;
+  line-height: 40rpx;
+}

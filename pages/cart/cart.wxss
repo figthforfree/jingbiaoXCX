@@ -1,0 +1,27 @@
+/* pages/cart/cart.wxss */
+page{background: #eee;}
+.ca-v0{height: 150rpx;text-align: center;font-size: 24rpx;width: 100%;background: #fff;line-height: 150rpx;border-top: 1px solid #eee;}
+.ca-main{background: #fff;width: 100%;}
+.ca-m1{padding: 20rpx;display: flex;flex-direction: row;justify-content: space-between;border-top: 1px solid #eee;}
+.ca-m1-1{width: 60rpx;height: 60rpx;display: flex;flex-direction: column;background:url('https://jingcheng668.com/static/8-1.png')no-repeat left;background-size:70%;margin-top: 20rpx;}
+.ca-m1-1on{background:url('https://jingcheng668.com/static/8-4.png')no-repeat left;background-size:70%;}
+.ca-m1-11{width: 60rpx;height: 60rpx;display: flex;flex-direction: column;background:url('https://jingcheng668.com/static/8-1.png')no-repeat left;background-size:70%;}
+.ca-m1-11on{background:url('https://jingcheng668.com/static/8-4.png')no-repeat left;background-size:70%;}
+.ca-m1-2{width: 450rpx;height: 100rpx;display: flex;flex-direction: row;}
+.ca-m2{width: 100rpx;height: 100rpx;margin-right: 20rpx;}
+.ca-m2 image{width: 100rpx;height: 100rpx;}
+.ca-m3{width: 330rpx;height: 100rpx;display: flex;flex-direction: column;padding: 10rpx 0;}
+.ca-m3-1{font-size: 24rpx;color: #333;width: 100%;height: 40rpx;overflow: hidden;line-height: 40rpx;}
+.ca-m3-2{font-size: 24rpx;color: #ee6817;width: 100%;height: 40rpx;overflow: hidden;line-height: 40rpx;}
+.ca-m1-3{width: 180rpx;height: 60rpx;margin-top: 20rpx;display: flex;flex-direction: row;text-align: right;justify-content: flex-end;}
+.firm-shu-jian{width: 60rpx;height: 60rpx;background: #eee;text-align: center;line-height: 60rpx;font-size: 36rpx;color: #666;}
+.firm-shu-zhi{min-width: 60rpx;height: 60rpx;text-align: center;line-height: 60rpx;font-size: 30rpx;color: #333;}
+.firm-shu-jia{width: 60rpx;height: 60rpx;background: #eee;text-align: center;line-height: 60rpx;font-size: 36rpx;color: #666;}
+.ca-mbt{position: fixed;bottom: 0;left: 0;width: 100%;height: 100rpx;background: #fff;display: flex;flex-direction: row;}
+.ca-mbt1{width: 460rpx;padding: 20rpx;display: flex;flex-direction: row;justify-content: space-between;}
+.ca-mbt2{width: 250rpx;background: #ee6817;font-size: 34rpx;color: #fff;text-align: center;line-height: 100rpx;}
+.ca-mbt1-1{display: flex;flex-direction: row;font-size: 24rpx;color: #333;width: 50%;line-height: 60rpx;}
+.ca-mbt-s{margin-left: 30rpx;}
+.ca-mbt1-2{font-size: 24rpx;color: #333;line-height: 60rpx;}
+.ca-mbt1-2 text{font-size: 24rpx;color: #ee6817;}
+

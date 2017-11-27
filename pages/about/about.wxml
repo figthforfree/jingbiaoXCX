@@ -1,0 +1,8 @@
+<!--pages/about/about.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class='ab-m1'>
+    <template is="wxParse" data="{{wxParseData:contents.nodes}}" />
+</view>
+
+
+

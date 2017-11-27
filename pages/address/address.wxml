@@ -1,0 +1,26 @@
+<!--pages/address/address.wxml-->
+<view class='container'>
+<block wx:for="{{address}}" wx:for-index="i">
+    <view class='address-m1' bindlongpress="longpress" data-id="{{item.a_id}}" data-index="{{i}}">
+        <view class='address-m2' bindtap='gogoods'  data-id="{{item.a_id}}" data-index="{{i}}">
+            <view class="address-m2-ding {{item.is_default == 1 ? 'address-m2-dingon':''}}"></view>
+            <view class='address-m2-ding2'>
+                <view class='address-m2-2'>{{item.name}}<text>{{item.phone}}</text></view>
+                <view class='address-m2-3'>{{item.province}}{{item.city}}{{item.country}}{{item.address}}</view>
+            </view>
+        </view>
+        <navigator hover-class='none' url='/pages/addre/addre?a_id={{item.a_id}}' class='address-m3'>
+            <image src='../../img/10-1.png'></image>
+        </navigator>
+    </view>
+   </block>
+   <view class='diandi'></view>
+    <!-- <navigator url='/pages/addre/addre' class='mem-m6'><image src='../../img/10-2.png'></image><text>新增地址</text></navigator> -->
+    <view class='car-t1'>
+        <view class='car-t2'>
+            <view><image src='{{url}}/static/8-2.png'></image></view>
+            <text>长按可以删除地址</text>
+        </view>
+        <navigator url='/pages/addre/addre' class='mem-m6' ><image src='../../img/10-2.png'></image><text>新增地址</text></navigator>
+    </view>
+</view>

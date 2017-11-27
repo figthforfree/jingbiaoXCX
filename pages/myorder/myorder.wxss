@@ -1,0 +1,34 @@
+/* pages/myorder/myorder.wxss */
+page{background: #eee;}
+.order-m00{margin-top: 70rpx;width: 100%;}
+.order-m1{height: 70rpx;background: #fff;border-top: 1px solid #eee;border-bottom: 1px solid #eee;display: flex;flex-direction: row;width: 100%;position: fixed;top: 0;left: 0;z-index: 10;}
+.order-m1-1{width: 20%;height: 70rpx;line-height: 70rpx;text-align: center;font-size: 24rpx;color: #333;box-sizing: border-box;}
+.order-on{border-bottom: 5rpx solid #ee6817;}
+.order-m2{margin-top: 10rpx;background: #fff;width: 100%;position: relative;}
+.tishixinxi{height: 150rpx;width: 100%;text-align: center;font-size: 24rpx;line-height: 150rpx;display: inline-block;}
+.order-m3{height: 60rpx;border-bottom: 1px solid #eee;line-height: 60rpx;padding: 0 20rpx;width: 710rpx;}
+.order-te1{font-size: 22rpx;color: #999;float: left;}
+.order-te2{font-size: 22rpx;color: #ee6817;float: right;}
+.order-te2 image{width: 34rpx;height: 34rpx;margin-top: 13rpx;}
+.order-te5{font-size: 22rpx;color: #999;float: right;}
+.order-m4{padding: 20rpx;display: flex;flex-direction: row;background: #f9f5f5;}
+.order-m4-1{padding: 20rpx;display: flex;flex-direction: row;background: #f9f5f5;}
+.order-m6{width: 140rpx;height: 140rpx;}
+.order-m6 image{width: 140rpx;height: 140rpx;}
+.order-m7{width: 400rpx;margin-left: 20rpx;display: flex;flex-direction: column;}
+.order-m9{font-size:24rpx;color:#ee6817;line-height: 140rpx;width: 130rpx;margin-left: 20rpx;text-align: right;height: 140rpx;overflow: hidden;}
+.order-te3{font-size: 24rpx;color: #333;line-height: 50rpx;width: 400rpx;height: 50rpx;overflow: hidden;}
+.order-te4{font-size: 22rpx;color: #999;}
+.order-m5{padding: 20rpx;background: #fff;}
+.order-jiade{display: flex;flex-direction: row;justify-content: flex-end;}
+.order-a1{width: 150rpx;height: 50rpx;line-height: 50rpx;font-size: 24rpx;color: #ee6817;border:1px solid #ee6817;border-radius: 5rpx;text-align: center;display: inline-block;margin-left: 20rpx;}
+.order-v1{line-height: 52rpx;height: 52rpx;margin-left: 20rpx;font-size: 22rpx;color: #b0b0b0;}
+.order-v2{line-height: 52rpx;height: 52rpx;font-size: 28rpx;color: #ee6817;}
+.pddt20{margin: 20rpx 0;}
+.order-m3-1{display: flex;flex-direction: row;padding: 10rpx 20rpx;}
+.order-m3-2{width: 50rpx;height: 50rpx;margin-right: 20rpx;}
+.order-m3-2 image{width: 50rpx;height: 50rpx;}
+.order-m3-3{font-size: 24rpx;color: #333;}
+.order-m3-3 text{font-size: 22rpx;color: #999;}
+.order-m8{width: 116rpx;height: 92rpx;position: absolute;right: 70rpx;top: 0;}
+.order-m8 image{width: 116rpx;height: 92rpx;}

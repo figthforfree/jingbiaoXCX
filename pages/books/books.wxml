@@ -1,0 +1,81 @@
+<!--pages/books/books.wxml-->
+<view class='container'>
+    <view class='book-m1'>
+        <view class="book-m1-1 {{selected?'book-m1on':''}}" bindtap="selected">
+            正在预约中
+        </view>
+        <view class="book-m1-1 {{selected1?'book-m1on':''}}" bindtap="selected1">
+            已完成的预约
+        </view>
+    </view>
+    <!--正在预约-->
+    <block wx:for="{{reservationList}}" wx:for-index="i" wx:for-item="v">
+        <view class="order-m2 {{selected?'show':'hidden'}}">
+            <view class='order-m3'>
+                <text class='order-te1'>订单编号：{{v.res_num}}</text>
+                <text wx:if="{{v.status == 1}}" class='order-te2'>未接受预约</text>
+                <text wx:if="{{v.status == 2}}" class='order-te2'>已接受预约</text>
+                <text wx:if="{{v.status == 3}}" class='order-te2'>拒绝预约</text>
+                <text wx:if="{{v.status == 4}}" class='order-te2'>预约完成</text>
+            </view>
+            <navigator open-type='redirect' url='/pages/store_x/store_x?id={{v.s_id}}' hover-class='none' class='order-m4'>
+                <view class='order-m67'>
+                    <view class='order-m6'>
+                        <image src='{{url}}{{v.spath}}'></image>
+                    </view>
+                    <view class='order-m7'>
+                        <text class='order-te3'>{{v.name}}</text>
+                        <text class='order-te4'>{{v.address}}</text>
+                        <text class='order-te4'>{{v.ser_info}}</text>
+                        <text class='order-te4'>服务时间：{{v.appointment}}</text>
+                    </view>
+                </view>
+            </navigator>
+            <view class='order-m5'>
+                <view bindtap='deleyuyue' data-id="{{v.id}}" data-index= "{{i}}" class='order-a1'>取消预约</view>
+            </view>
+        </view>
+    </block>
+    <!--已完成-->
+    <block wx:for="{{reservationList}}" wx:for-index="i" wx:for-item="v">
+        <view class="order-m2 {{selected1?'show':'hidden'}}">
+            <view class='order-m3'>
+                <text class='order-te1'>订单编号：{{v.res_num}}</text>
+                <text class='order-te5'>已完成订单</text>
+            </view>
+            <view class='order-m4'>
+                <view class='order-m67'>
+                    <view class='order-m6-1'>
+                        <image src='{{url}}/static/4-1.jpg'></image>
+                    </view>
+                    <view class='order-m7'>
+                        <text class='order-te3'>{{v.car_info}}</text>
+                        <text class='order-te4'>{{v.car_models}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class='order-m4'>
+                <view class='order-m67'>
+                    <view class='order-m6'>
+                        <image src='{{url}}/static/4-1.jpg'></image>
+                    </view>
+                    <view class='order-m7'>
+                        <text class='order-te3'>{{v.name}}</text>
+                        <text class='order-te4'>{{v.address}}</text>
+                        <text class='order-te4'>{{v.ser_info}}</text>
+                        <text class='order-te4'>服务时间：{{v.appointment}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class='order-m5'>
+                <view class='order-te2' bindtap='shanyuyue' data-id="{{v.id}}" data-index= "{{i}}">
+                    <image src='{{url}}/static/9-25.png'></image>
+                </view>
+                <view bindtap='gopingjia' data-id="{{v.id}}" class='order-a1' wx:if="{{v.is_comment == 0}}">评价</view>
+            </view>
+            <view class='order-m8'><image src='{{url}}/static/9-24.png'></image></view>
+        </view>
+    </block>
+    <view class='order-m22' wx:if="{{!reservationList[0]}}" >亲、您还没有预约哦··<text bindtap="goyuyue" class='order-m2-a1'>点我去预约</text></view>
+
+</view> 

@@ -1,0 +1,82 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/insurance/insurance",
+        "pages/sub_insurance/sub_insurance",
+        "pages/c_card/c_card",
+        "pages/sub_card/sub_card",
+        "pages/loan/loan",
+        "pages/sub_loan/sub_loan",
+        "pages/swap/swap",
+        "pages/sub_swap/sub_swap",
+        "pages/store/store",
+        "pages/store_two/store_two",
+        "pages/store_x/store_x",
+        "pages/seckill/seckill",
+        "pages/menu/menu",
+        "pages/users/users",
+        "pages/about/about",
+        "pages/mem_bind_re/mem_bind_re",
+        "pages/mem_bind/mem_bind",
+        "pages/integral/integral",
+        "pages/address/address",
+        "pages/addre/addre",
+        "pages/mycar/mycar",
+        "pages/myorder/myorder",
+        "pages/myorder_x/myorder_x",
+        "pages/books/books",
+        "pages/book/book",
+        "pages/change_model/change_model",
+        "pages/s_select/s_select",
+        "pages/firm_order/firm_order",
+        "pages/products/products",
+        "pages/product/product",
+        "pages/models/models",
+        "pages/models_p/models_p",
+        "pages/models_n/models_n",
+        "pages/models_c/models_c",
+        "pages/assess/assess",
+        "pages/logs/logs",
+        "pages/spread/spread",
+        "pages/cart/cart",
+        "pages/sp_next/sp_next"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "京骉车宝",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#666",
+        "selectedColor": "#ee6817",
+        "borderStyle": "#000",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "img/1-33.png",
+                "selectedIconPath": "img/1-32.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/store/store",
+                "iconPath": "img/1-34.png",
+                "selectedIconPath": "img/1-35.png",
+                "text": "门店"
+            },
+            {
+                "pagePath": "pages/menu/menu",
+                "iconPath": "img/1-36.png",
+                "selectedIconPath": "img/1-37.png",
+                "text": "商城"
+            },
+            {
+                "pagePath": "pages/users/users",
+                "iconPath": "img/1-38.png",
+                "selectedIconPath": "img/1-39.png",
+                "text": "我的"
+            }
+        ]
+    }
+}

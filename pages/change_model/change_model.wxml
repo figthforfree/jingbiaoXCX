@@ -1,0 +1,41 @@
+<!--pages/change_model/change_model.wxml-->
+<view class='container'>
+<!--车型列表-->
+    <view class='change-m1'>
+        <view class='change-m2'>
+            <view class='change-m2-1'>
+                <image src='{{url}}/static/7-6.png'></image>
+            </view>
+            <view class='change-m2-2'>
+                <text class='change-te1'>一汽大众奥迪—A6——2005年生产</text>
+                <text class='change-te2'>2002款 2.8L 手动 豪华舒适型</text>
+            </view>
+            <view class='change-m2-3' style='background:url({{url}}/static/8-4.png)no-repeat right;background-size:70%;'>
+            </view>
+        </view>
+        <view class='change-m2'>
+            <view class='change-m2-1'>
+                <image src='{{url}}/static/7-6.png'></image>
+            </view>
+            <view class='change-m2-2'>
+                <text class='change-te1'>一汽大众奥迪—A6——2005年生产</text>
+                <text class='change-te2'>2002款 2.8L 手动 豪华舒适型</text>
+            </view>
+            <view class='change-m2-3' style='background:url({{url}}/static/8-1.png)no-repeat right;background-size:70%;'>
+            </view>
+        </view>
+    </view>
+<!--无车型-->
+    <!-- <view class='change-wu'>
+        <view><image src='{{url}}/static/8-3.png'></image></view>
+        <text>您还没有选择车辆！</text>
+    </view> -->
+
+    <view class='car-t1'>
+        <view class='car-t2'>
+            <view><image src='{{url}}/static/8-2.png'></image></view>
+            <text>长按可以删除车辆</text>
+        </view>
+        <view class='mem-m6'>添加爱车</view>
+    </view>
+</view>

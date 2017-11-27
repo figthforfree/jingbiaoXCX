@@ -1,0 +1,36 @@
+/* pages/s_select/s_select.wxss */
+.select-main{width: 100%;border-top: 1px solid #eee;}
+.select-m1{height: 60rpx;line-height: 60rpx;padding: 0 20rpx;display: flex;flex-direction: row;}
+.select-m1 image{width: 50rpx;height: 50rpx;margin: 5rpx 20rpx 0 0;}
+.select-m1 text{font-size: 24rpx;color: #333;font-weight: 700;line-height: 60rpx;width: 630rpx;}
+.select-m2{background: #eee;font-size: 24rpx;color: #333;height: 60rpx;line-height: 60rpx;padding: 0 20rpx;font-weight: 700;border-bottom: 1px solid #eee;}
+.select-m3{height: 85rpx;line-height: 85rpx;padding: 0 20rpx;display: flex;flex-direction: row;border-bottom: 1px solid #eee;}
+.select-m3 image{width: 40rpx;height: 40rpx;margin: 20rpx 20rpx 0 0;}
+.select-m3 text{font-size: 24rpx;color: #333;font-weight: 700;line-height: 85rpx;width: 630rpx;}
+
+.sc-view{height: 800rpx;}
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+.drawer_attr_box {
+  width: 100%;
+  height: 100%;
+  border-top:1px solid #eee;
+  border-left:1px solid #eee;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+}

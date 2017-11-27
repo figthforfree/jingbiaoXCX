@@ -1,0 +1,86 @@
+<!--pages/models/models.wxml-->
+<view class="container2 {{dailogmodel == true?'dailogmodel':''}}" >
+    <view class='models-m0'>
+        <view class='models-main'>
+            <view class='models-top'>
+                <image src='{{url}}/static/1-4.png'></image>
+                <input class="models-in1 {{dianjisou == true?'models-in1on':''}}'" bindinput='goseach' bindfocus="tanseach"  confirm-type="search" data-status="1" placeholder='汽车品牌关键字' value="{{searchinput}}"></input>
+            </view>
+            <text wx:if="{{dianjisou}}" bindtap='untanseach' class='models-quxiao'>取消</text>
+        </view>
+        <view class='models-m1'>热门品牌</view>
+    </view>
+    <!--弹搜索-->
+    <view class="drawer_screen2" bindtap='tanseach' data-status="0" wx:if="{{showModalStatus2}}"></view>
+    <view animation="{{animationData}}" class="drawer_attr_box2" wx:if="{{showModalStatus2}}">
+        <view class='models-nav2'>
+            <view class='models-m3-2' wx:for="{{seachlist}}" bindtap='xuanpl' data-id="{{item.id}}">
+                <view class='models-m3-img'>
+                    <image src='{{url}}{{item.path}}' bindload="imageLoad"></image>
+                </view>
+                <text>{{item.name}}</text>
+            </view>
+        </view>
+    </view>
+    <scroll-view  scroll-y="{{isScroll}}" class='container2' scroll-into-view="{{toView}}" scroll-with-animation="true" scroll-y>
+        <view class='models-m2' id="inToViewAA">
+            <block wx:for="{{HotCarBrand}}" wx:for-index="i" wx:for-item="v">
+                <view class='models-m2-1' bindtap='tanselect' data-status="1" data-topid="{{v.id}}" data-path="{{v.path}}" data-name="{{v.name}}">
+                    <view>
+                        <image wx:if="{{v.path}}" src='{{url}}{{v.path}}'></image>
+                    </view>
+                    <text>{{v.name}}</text>
+                </view>
+            </block>
+        </view>
+    
+        <!--循环体-->
+        <view class='models-m3' wx:for="{{CarBrand}}" wx:for-index="i" wx:for-item="v">
+            <view class='models-m3-1' id="{{ 'inToView'+ i }}">{{i}}</view>
+            <block wx:for="{{v}}">
+                <view class='models-m3-2' data-topid="{{item.id}}" bindtap='tanselect' data-path="{{item.path}}" data-name="{{item.name}}" data-status="1">
+                    <view class='models-m3-img'>
+                        <image src='{{url}}{{item.path}}' bindload="imageLoad" style="width:{{imgwidth}}rpx; height:{{imgheight }}rpx;"></image>
+                    </view>
+                    <text>{{item.name}}</text>
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+
+
+
+    <!--右侧字母导航-->
+    <scroll-view scroll-y class='models-nav'>
+        <view class='models-navli' bindtap="scrollToViewFn" data-id="AA">#</view>
+        <block wx:for="{{CarBrand}}" wx:for-index="i" wx:for-item="v">
+            <view class='models-navli' bindtap="scrollToViewFn" data-id="{{i}}">{{i}}</view>
+        </block>
+
+    </scroll-view>
+
+    <!--弹窗-->
+    <view class="drawer_screen" bindtap='tanselect' data-status="0" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+        <view class='select-main'>
+            <view class='select-m1'>
+                <image src='{{url}}{{path}}'></image>
+                <text>{{name}}</text>
+            </view>
+
+            <scroll-view scroll-y="true" class='sc-view'>
+                <block wx:for="{{VehicleModel}}" wx:for-index="i" wx:for-item="v">
+                    <view class='select-m2'>
+                        {{i}}
+                    </view>
+                    <block wx:for="{{v}}" wx:for-index="ii" wx:for-item="vv">
+                        <view bindtap='xuanpl' data-id="{{vv.id}}" class='select-m3'>
+                            <text>{{vv.name}}</text>
+                        </view>
+                    </block>
+                </block>
+            </scroll-view>
+        </view>
+    </view>
+
+</view>

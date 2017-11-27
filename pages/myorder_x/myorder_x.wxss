@@ -1,0 +1,33 @@
+/* pages/myorder_x/myorder_x.wxss */
+page{background: #eee;}
+.orderx-m1{height: 200rpx;background:#ee6817;display: flex;flex-direction: row; }
+.orderx-m1 image{width: 117rpx;height: 86rpx;margin: 54rpx 0 0 118rpx;}
+.orderx-m1 text{font-size: 28rpx;color: #fff;margin: 80rpx 0 0 50rpx;}
+.orderx-m2{display: flex;flex-direction: column;background: #fff;margin-bottom: 20rpx;}
+.orderx-m2-1{display: flex;flex-direction: column;padding: 20rpx;border-bottom: 1px solid #eee;font-size: 24rpx;color: #333;}
+.orderx-m2-1 text{margin-bottom: 10rpx;}
+.orderx-m3{padding: 0 20rpx;font-size: 22rpx;color: #666;margin-bottom: 10rpx;display: flex;flex-direction: column;}
+.diandi{height: 100rpx;width: 100%;background: none;}
+.orderx-m4{position: fixed;left: 0;bottom: 0;background: #fff;height: 100rpx;width: 100%;display: flex;justify-content: flex-end;}
+.orderx-m4 text{display: inline-block;width: 150rpx;height: 54rpx;border:1px solid #ee6817;font-size: 24rpx;color: #ee6817;text-align: center;line-height: 54rpx;border-radius: 5px;margin:20rpx 20rpx 0 0;}
+
+.order-m2{margin-bottom: 20rpx;background: #fff;width: 100%;position: relative;}
+.tishixinxi{height: 150rpx;width: 100%;text-align: center;font-size: 24rpx;line-height: 150rpx;display: inline-block;}
+.order-m3{height: 60rpx;border-bottom: 1px solid #eee;line-height: 60rpx;padding: 0 20rpx;width: 710rpx;}
+.order-te1{font-size: 22rpx;color: #999;float: left;}
+.order-te2{font-size: 22rpx;color: #ee6817;float: right;}
+.order-te2 image{width: 34rpx;height: 34rpx;margin-top: 13rpx;}
+.order-te5{font-size: 22rpx;color: #999;float: right;}
+.order-m4{padding: 20rpx;display: flex;flex-direction: row;background: #f9f5f5;}
+.order-m4-1{padding: 20rpx;display: flex;flex-direction: row;background: #f9f5f5;}
+.order-m6{width: 140rpx;height: 140rpx;}
+.order-m6 image{width: 140rpx;height: 140rpx;}
+.order-m7{width: 400rpx;margin-left: 20rpx;display: flex;flex-direction: column;}
+.order-m9{font-size:24rpx;color:#ee6817;line-height: 140rpx;width: 130rpx;margin-left: 20rpx;text-align: right;height: 140rpx;overflow: hidden;}
+.order-te3{font-size: 24rpx;color: #333;line-height: 50rpx;width: 400rpx;height: 50rpx;overflow: hidden;}
+.order-te4{font-size: 22rpx;color: #999;}
+.order-m5{padding: 20rpx;background: #fff;}
+.order-jiade{display: flex;flex-direction: row;justify-content: flex-end;}
+.order-a1{width: 150rpx;height: 50rpx;line-height: 50rpx;font-size: 24rpx;color: #ee6817;border:1px solid #ee6817;border-radius: 5rpx;text-align: center;display: inline-block;margin-left: 20rpx;}
+.order-v1{line-height: 52rpx;height: 52rpx;margin-left: 20rpx;font-size: 22rpx;color: #b0b0b0;}
+.order-v2{line-height: 52rpx;height: 52rpx;font-size: 28rpx;color: #ee6817;}

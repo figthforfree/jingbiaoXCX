@@ -1,0 +1,61 @@
+<!--pages/myorder_x/myorder_x.wxml-->
+<view class='orderx-m1'>
+    <image src='{{url}}/static/2_1.png'></image>
+    <text  wx:if="{{orderInfo.order_status == 1}}">待付款</text>
+    <text  wx:if="{{orderInfo.order_status == 2}}">等待发货</text>
+    <text  wx:if="{{orderInfo.order_status == 3}}">卖家已发货，请耐心等待签收...</text>
+    <text  wx:if="{{orderInfo.order_status == 4 && orderInfo.is_comment == 0}}">待评价</text>
+    <text  wx:if="{{orderInfo.order_status == 4 && orderInfo.is_comment == 1}}">已完成</text>
+    <text  wx:if="{{orderInfo.order_status == 5}}">已退款</text>
+</view>
+<view class='orderx-m2'>
+    <view class='orderx-m2-1'>
+        <text>收件人：{{orderInfo.name}}-{{orderInfo.phone}}</text>
+        <text>收货地址：{{orderInfo.province}}{{orderInfo.city}}{{orderInfo.country}}{{orderInfo.address}}</text>
+    </view>
+    <view class='orderx-m2-1' wx:if="{{orderInfo.order_status >=3 && orderInfo.order_status != 5}}">{{orderInfo.logistics_providers}}单号：{{orderInfo.shipment_number}}</view>
+
+    <view class='orderx-m2-1' wx:if="{{orderInfo.order_status ==5 && orderInfo.refund_information}}">退款信息：{{orderInfo.refund_information}}</view>
+</view>
+<view class='order-m2'>
+    <view class='order-m3'>
+        <text class='order-te1'>订单编号：{{orderInfo.order_num}}</text>
+        <text class='order-te2' wx:if="{{orderInfo.order_status == 1}}">待付款</text>
+        <text class='order-te2' wx:if="{{orderInfo.order_status == 2}}">等待发货</text>
+        <text class='order-te2' wx:if="{{orderInfo.order_status == 3}}">等待收货</text>
+        <text class='order-te2' wx:if="{{orderInfo.order_status == 4 && orderInfo.is_comment == 0}}">待评价</text>
+        <text class='order-te2' wx:if="{{orderInfo.order_status == 4 && orderInfo.is_comment == 1}}">已完成</text>
+        <text class='order-te2' wx:if="{{orderInfo.order_status == 5}}">已退款</text>
+    </view>
+    <block wx:for="{{orderInfo.goods}}">
+        <view class='order-m4' >
+            <view class='order-m6'>
+                <image src='{{url}}{{item.path}}'></image>
+            </view>
+            <view class='order-m7'>
+                <text class='order-te3'>{{item.gname}}</text>
+                <text class='order-te4' wx:if='{{item.spec}}'>{{item.spec}}</text>
+                <text class='order-te4' >{{item.num}}件</text>
+            </view>
+            <view class='order-m9' wx:if='{{item.is_spike}}'>
+                ￥{{item.spike_price}}
+            </view>
+            <view class='order-m9' wx:if='{{!item.is_spike}}'>
+                ￥{{item.price}}
+            </view>
+        </view>
+    </block>
+    
+    <view class='order-m5'>
+        <view class='order-jiade'>
+            <view class='order-v1'>共{{orderInfo.num}}件，合计：</view>
+            <view class='order-v2'>￥{{orderInfo.order_amount}}</view>
+        </view>
+    </view>  
+</view>
+<view class='diandi'></view>
+<view class='orderx-m4'>
+    <text  bindtap="pay" wx:if="{{orderInfo.order_status == 1}}">立即支付</text>
+    <text  bindtap='confirm' wx:if="{{orderInfo.order_status == 3}}">确认收货</text>
+    <text  bindtap='gopingjia' wx:if="{{orderInfo.order_status == 4 && orderInfo.is_comment == 0}}">去评价</text>
+</view>

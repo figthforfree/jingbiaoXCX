@@ -1,0 +1,45 @@
+<!--pages/seckill/seckill.wxml-->
+<view class='container'>
+    <view class='seckill-banner'>
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interva}}" duration="{{duration}}">
+            <block wx:for="{{mbanner}}">
+                <swiper-item>
+                    <image wx:if="{{item.path}}" src="{{url}}{{item.path}}" class="slide-image" width="750" height="338" />
+                </swiper-item>
+            </block>
+        </swiper>
+
+    </view>
+    <view class='seckill-m1'>
+        <block wx:for="{{spikeCat}}" wx:for-index="i" wx:for-item="v">
+            <view class="seckill-m1-1 {{cat_id == v.cat_id ?'seckill-m1-on':''}}" bindtap='dianji' data-id="{{v.cat_id}}" data-name="{{v.name}}">{{v.name}}</view>
+        </block>
+    </view>
+    <!--没有数据-->
+    <view class='kong' wx:if="{{!spikeList[0]}}"><image src='{{url}}/static/8-3.png'></image><text>暂无秒杀商品！</text></view>
+    <view class='seckill-m2' wx:if="{{spikeList[0]}}">
+        <view class='seckill-m2-top' style='background:#fff url({{url}}/static/1-40.png)no-repeat center;background-size:100%;'>
+            <text>{{cat_name}}</text>
+        </view>
+        <block wx:for="{{spikeList}}" wx:for-index="i" wx:for-item="v">
+            <view class='seckill-m2-1'>
+                <view class='seckill-m2-2' data-gid="{{v.g_id}}">
+                    <view class='seckill-m2-4'>
+                        <image src='{{url}}{{v.path}}'></image>
+                    </view>
+                    <view class='seckill-m2-5'>
+                        <view class='seckill-m2-te1'>{{v.title}}</view>
+                        <view class='seckill-m2-te2'>￥{{v.price}} </view>
+                        <!-- <text>月销售1266笔</text> -->
+                    </view>
+                </view>
+                <view class='seckill-m2-3'>
+                    <text>剩余{{timearr[i].d}}天{{timearr[i].h}}时{{timearr[i].i}}分{{timearr[i].s}}秒</text>
+                    <navigator url='/pages/product/product?type=1&g_id={{v.g_id}}' hover-class='none' class='seckill-m2-a1' wx:if="{{timearr[i].y}}">立即抢购</navigator>
+                </view>
+            </view>
+        </block>
+
+
+    </view>
+</view>

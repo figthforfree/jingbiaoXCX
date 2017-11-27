@@ -1,0 +1,14 @@
+/* pages/mem_bind_re/mem_bind_re.wxss */
+.men-top{height: 240rpx;display: flex;flex-direction: column;text-align: center;border-top: 1px solid #eee;width: 100%;margin-bottom: 20rpx;}
+.men-top image{width: 150rpx;height: 150rpx;border-radius: 50%;font-size: 24rpx;color: #ee6817;margin-top: 40rpx;}
+.men-m1{padding: 30rpx 0;border-bottom: 1px solid #eee;width: 710rpx;display: flex;flex-direction: row;}
+.men-te2{font-size: 26rpx;color: #333;line-height: 60rpx;}
+.men-m3{display: flex;flex-direction: row;}
+.men-in1{line-height: 60rpx;width: 550rpx;margin-left: 20rpx;height: 60rpx;}
+.men-in2{line-height: 60rpx;width: 435rpx;margin-left: 20rpx;height: 60rpx;}
+.in1pl{font-size: 26rpx;color: #999;}
+.men-te1{width: 170rpx;height: 60rpx;line-height: 60rpx;background: #ee6817;text-align: center;font-size: 24rpx;color: #fff;border-radius: 5rpx;}
+.men-m2{margin-top: 30rpx;}
+.men-m2-a1{width: 100%;height: 80rpx;line-height: 80rpx;font-size: 30rpx;color: #fff;text-align: center;border-radius: 50rpx;background: #ee6817;}
+.men-m0{padding: 0 20rpx;width: 710rpx;}
+.hidden{display: none;}

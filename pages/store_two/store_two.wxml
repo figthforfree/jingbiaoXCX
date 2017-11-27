@@ -1,0 +1,55 @@
+<!--pages/store/store.wxml-->
+<view class="container">
+    <view class='store-nav' wx:if="{{store[0]}}">
+        <view class='store-nav1' bindtap='selectCat' data-status="1">
+            <text>{{district}}</text>
+            <image src='{{url}}/static/4-6.png'></image>
+        </view>
+        <view class='store-nav1' bindtap='selectCat2' data-status="1">
+            <text>默认排序</text>
+            <image src='{{url}}/static/4-6.png'></image>
+        </view>
+    </view>
+    <view class='drawer_screen' bindtap='selectCat' data-status="0" wx:if="{{showModalStatus}}"></view>
+    <view  animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+        <block wx:for="{{District}}" wx:for-index="i" wx:for-item="v">
+            <view class='store-dz' bindtap='xuandq' data-name="{{v.country}}">{{v.country}}</view>
+        </block>
+    </view>
+    <view class='drawer_screen' bindtap='selectCat2' data-status="0" wx:if="{{showModalStatus2}}"></view>
+    <view  animation="{{animationData2}}" class="drawer_attr_box" wx:if="{{showModalStatus2}}">
+        <!-- <block wx:for="{{District}}" wx:for-index="i" wx:for-item="v"> -->
+            <view class='store-dz' data-status="1" bindtap='chose' >订单量</view>
+            <view class='store-dz' data-status="2" bindtap='chose' >按评价</view>
+            <view class='store-dz' data-status="3" bindtap='chose' >按距离</view>
+        <!-- </block> -->
+    </view>
+    <view class='store-m5' wx:if="{{store}}">
+        <block wx:for="{{store}}" wx:for-index="i" wx:for-item="v">
+            <navigator url='/pages/store_x/store_x?id={{v.id}}&km=10km以上'  hover-class='none'>
+                <view class='store-m1'>
+                    <view class='store-m2'>
+                        <image src='{{url}}{{v.path}}'></image>
+                    </view>
+                    <view class='store-m3'>
+                        <text class='store-m1-te1'>{{v.name}}</text>
+                        <view class='store-m4'>
+                            <text class='store-m1-te2'>总评价</text>
+                            <text class='store-m1-te3'>{{v.e_num}}</text>
+                            <text class='store-m1-te4'>总订单</text>
+                            <text class='store-m1-te3'>{{v.o_num}}</text>
+                        </view>
+                        <view class='store-m4'>
+                            <text class='store-m1-te5'>{{v.province}}{{v.city}}{{v.country}}{{v.address}}</text>
+
+
+                            <text class='store-m1-te6' >{{v.km}}km</text>
+                        </view>
+                    </view>
+                </view>
+            </navigator>
+            
+        </block>
+    </view>
+    <view class='kong' wx:if="{{!store[0]}}"><image src='{{url}}/static/8-3.png'></image><text>该服务正在筹备中...！</text></view>
+</view>

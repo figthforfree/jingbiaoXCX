@@ -1,0 +1,16 @@
+<!--pages/models_p/models_p.wxml-->
+<view class='container'>
+    <view class='select-m1'>
+        <image src='{{url}}{{brand.path}}'></image>
+        <text>{{brand.brand_name}}</text>
+    </view>
+    <view class='select-m2'>
+        发动机排量
+    </view>
+    <block wx:for="{{CarMore}}" wx:for-index="i" wx:for-item="v">
+        
+        <view bindtap='xuannf' data-id="{{v.id}}" class='select-m3'>
+            <text>{{v.name}}</text>
+        </view>
+    </block>
+</view>

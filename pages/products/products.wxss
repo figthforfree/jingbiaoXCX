@@ -1,0 +1,23 @@
+/* pages/products/products.wxss */
+.pros-main{width: 100%;}
+.pros-m0{position: fixed;left: 0;top: 0;width: 100%;background: #fff;}
+.pros-m1{margin:15rpx auto;padding: 0 20rpx;border:1px solid #eee;border-radius: 50rpx;height: 64rpx;width: 710rpx;box-sizing: border-box;}
+.pros-m1-1{height:44rpx;line-height: 44rpx;background: #ccc;border-radius: 50rpx;font-size: 24rpx;color: #333;padding: 0 15rpx;display: inline-block;margin-top: 9rpx;}
+.pros-m1-1 text{float: left;}
+.pros-m1-1 image{width: 26rpx;height: 26rpx;margin: 10rpx 0 0 15rpx;float: right;}
+.pros-m2{border-bottom: 1px solid #eee;display: flex;flex-direction: row;}
+.pros-m2-1{width: 50%;font-size: 24rpx;color: #333;line-height: 80rpx;height: 80rpx;text-align: center;}
+.pros-m2-2{width: 50%;font-size: 24rpx;color: #333;line-height: 80rpx;height: 80rpx;text-align: center;display: flex;flex-direction: row;justify-content: center;}
+.pros-m2-2 image{width:13rpx;height: 20rpx;margin:30rpx 0 0 10rpx;}
+.pros-m3{padding: 0 20rpx;width: 710rpx;}
+.pros-m3-on1{margin-top: 85rpx;}
+.pros-m3-on2{margin-top: 175rpx;}
+.pros-m3-1{padding: 20rpx 0;display: flex;flex-direction: row;border-bottom:1px solid #eee;}
+.pros-m3-2{width: 160rpx;height: 160rpx;}
+.pros-m3-2 image{width: 160rpx;height: 160rpx;}
+.pros-m3-3{width: 530rpx;margin-left: 20rpx;display: flex;flex-direction: column;}
+.pros-te1{font-size: 24rpx;color: #333;line-height: 30rpx;font-weight: 700;height: 120rpx;overflow: hidden;}
+.pros-te2{font-size: 32rpx;color: #ee6817;line-height: 40rpx;}
+.pros-te2 text{font-size: 20rpx;color: #999;margin-left: 20rpx;}
+.pros-m3-1-te1{text-align: center;line-height: 160rpx;font-size: 24rpx;width: 100%;}
+.redc{color:red}

@@ -1,0 +1,84 @@
+<!--pages/mem_bind/mem_bind.wxml-->
+<view class='container'>
+    <view class='mem-main'>
+        <view class='men-tishi' wx:if="{{is_check == 5}}">通过审核</view>
+        <view class='men-tishi' wx:if="{{is_check == 2}}">后台审核中</view>
+        <view class='men-tishi' wx:if="{{is_check == 3}}">审核不通过 <text>原因:{{texts}}</text></view>
+
+        <view class='mem-m2'>
+            <text><text class='bitian'>*</text>请输入您的牌照(车牌号)</text>
+            <!-- <input class='mem-in1' bindinput='getchepai' placeholder='粤B88888' value='{{chepai}}'></input> -->
+            <input bindinput='getchepai' class='men-in1' placeholder='粤B88888' value='{{chepai}}'></input>
+        </view>
+        <view class='mem-m1'>
+            <view class='men-m1-h3'>
+                <text>*</text>行驶证信息车辆照片</view>
+            <view class='men-m1-s1'>
+                <view class='men-m1-s2'>
+                    <view class='men-m1-s3' bindtap='uploadimg2' wx:if="{{driving_2}}">
+                        <image src="{{url}}{{driving_2}}" />
+                    </view>
+                    <view class='men-m1-s3' bindtap='uploadimg2' wx:else>
+                        <image src="../../img/1_1.jpg" />
+                    </view>
+                    <view class='men-m1-s31'>图片大小不超过5MB</view>
+                </view>
+                <view class='men-m1-s2'>
+                    <view class='men-m1-s3'>
+                        <image src="../../img/1_2.jpg" />
+                    </view>
+                    <view class='men-m1-s31'>示例图</view>
+                </view>
+            </view>
+        </view>
+        <view class='mem-m1'>
+            <view class='men-m1-h3'>
+                <text>*</text>行驶证信息内页照片</view>
+            <view class='men-m1-s1'>
+                <view class='men-m1-s2'>
+                    <view class='men-m1-s3' bindtap='uploadimg1' wx:if="{{driving_1}}">
+                        <image src="{{url}}{{driving_1}}" />
+                    </view>
+                    <view class='men-m1-s3' bindtap='uploadimg1' wx:else>
+                        <image src="../../img/1_1.jpg" />
+                    </view>
+                    <view class='men-m1-s31'>图片大小不超过5MB</view>
+                </view>
+                <view class='men-m1-s2'>
+                    <view class='men-m1-s3' bindtap='uploadimg3' wx:if="{{driving_3}}">
+                        <image src="{{url}}{{driving_3}}" />
+                    </view>
+                    <view class='men-m1-s3' bindtap='uploadimg3' wx:else>
+                        <image src="../../img/1_1.jpg" />
+                    </view>
+                    <view class='men-m1-s31'>图片大小不超过5MB</view>
+                </view>
+                <view class='men-m1-s2'>
+                    <view class='men-m1-s3'>
+                        <image src="../../img/1_3.jpg" />
+                    </view>
+                    <view class='men-m1-s31'>示例图1</view>
+                </view>
+                <view class='men-m1-s2'>
+                    <view class='men-m1-s3'>
+                        <image src="../../img/1_4.jpg" />
+                    </view>
+                    <view class='men-m1-s31'>示例图2</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='diandibg'></view>
+    <view class='mem-m6' bindtap='tijiaobind' wx:if="{{is_check == 1 || is_check == 3 }}">提交</view>
+</view>
+
+<view class='mask' wx:if="{{showModalStatus}}">
+    <view class='mask1'>
+        <view class='ma-m1'>支付认证</view>
+        <view class='ma-m2'>支付金额：￥{{price}}</view>
+        <view class='ma-m3'>
+            <view class='ma-m3-1' bindtap='jump'>跳过认证</view>
+            <view class='ma-m3-2' bindtap='pay'>支付认证</view>
+        </view>
+    </view>
+</view>

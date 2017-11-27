@@ -1,0 +1,34 @@
+<!--pages/cart/cart.wxml-->
+<view class='ca-main'>
+    <view wx:if="{{hasList == false}}" class='ca-v0'>购物车为空</view>
+    <view wx:if="{{hasList == true}}" wx:for="{{carts}}" class='ca-m1' data-index="{{index}}" bindlongpress="deleteList" >
+        <view wx:if="{{item.selected}}" bindtap="selectList" data-index="{{index}}" class='ca-m1-1 ca-m1-1on'></view>
+        <view wx:else bindtap="selectList" data-index="{{index}}" class='ca-m1-1'></view>
+        <view class='ca-m1-2'>
+            <view class='ca-m2'><image src='{{url}}/{{item.path}}'></image></view>
+            <view class='ca-m3'>
+                <view class='ca-m3-1'>{{item.title}}</view>
+                <view class='ca-m3-2'>￥{{item.price}}</view>
+            </view>
+        </view>
+        <view class='ca-m1-3'>
+            <view class='firm-shu-jian' bindtap="minusCount" data-index="{{index}}">－</view>
+            <view class='firm-shu-zhi'>{{item.num}}</view>
+            <view class='firm-shu-jia' bindtap="addCount" data-index="{{index}}">＋</view>
+        </view>
+    </view>
+    
+    <view class='diandiee'></view>
+    <view  wx:if="{{hasList == true}}" class='ca-mbt'>
+        <view class='ca-mbt1'>
+            <view class='ca-mbt1-1'>
+                <view wx:if="{{selectAllStatus}}" bindtap="selectAll" class='ca-m1-11 ca-m1-11on'></view>
+                <view wx:else bindtap="selectAll" class='ca-m1-11'></view>
+                <text>全选</text>
+                <!-- <view class='ca-mbt-s' bindtap="deleteList" >删除</view> -->
+            </view>
+            <view class='ca-mbt1-2'>合计：<text>￥{{totalPrice}}</text></view>
+        </view>
+        <view class='ca-mbt2' bindtap='pay'>去结算</view>
+    </view>
+</view>

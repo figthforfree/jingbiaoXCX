@@ -1,0 +1,40 @@
+<!--pages/s_select/s_select.wxml-->
+<view class='container'>
+    <view class='select-main'>
+        <view class='select-m1'>
+            <image src='{{url}}/static/7-6.png'></image>
+            <text>一汽大众奥迪—A6—2005年—2002款2.8L手动一体</text>
+        </view>
+        <view class='select-m2'>
+            服务类型
+        </view>
+        <block wx:for="{{ServiceById}}" wx:for-index="i" wx:for-item="v">
+            <view class='select-m3' bindtap='tanselect' data-i="{{i}}" data-status="1">
+                <image src='{{url}}{{v.path}}'></image>
+                <text>{{v.name}}</text>
+            </view>
+        </block>
+    </view>
+
+    <view class="drawer_screen" bindtap='tanselect' data-status="0" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+        <view class='select-main'>
+            <view class='select-m1'>
+                <image src='{{url}}{{path}}'></image>
+                <text>{{name}}</text>
+            </view>
+            <view class='select-m2'>
+                {{name}}
+            </view>
+            <scroll-view class='sc-view'>
+                <block wx:for="{{serviceson2}}" wx:for-index="i" wx:for-item="v">
+                    <view class='select-m3' bindtap='xdfuwu' data-id="{{v.id}}">
+                        <text>{{v.name}}</text>
+                    </view>
+                </block>
+            </scroll-view>
+        </view>
+    </view>
+
+
+</view>

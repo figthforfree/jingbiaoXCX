@@ -1,0 +1,8 @@
+<!--pages/spread/spread.wxml-->
+<view class='tui-main'>
+    <view class='tui-m1'><image src='{{userinfo.headimg}}'></image></view>
+    <view class='tui-m2'>{{userinfo.nickname}}</view>
+    <navigator url='/pages/sp_next/sp_next' hover-class='none' class='tui-m3'>查看我的推广</navigator>
+    <view class='tui-m4' bindtap='previewImage'><image wx:if="{{userinfo.qr}}" src='{{url}}/{{userinfo.qr}}'></image></view>
+    <view class='tui-m5'>保存图片或者直接分享二维码邀请好友</view>
+</view>

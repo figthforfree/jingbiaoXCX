@@ -1,0 +1,119 @@
+/* pages/mycar/mycar.wxss */
+
+.car-m0 {
+    border-top: 1px solid #eee;
+    width: 100%;
+}
+
+.car-m1 {
+    border-bottom: 1px solid #eee;
+    padding: 20rpx;
+    display: flex;
+    flex-direction: column;
+}
+.zhifu-m0 {
+    height: 85rpx;
+    display: flex;
+    flex-direction: row;
+}
+.zhifu-m1{
+    height: 50rpx;line-height: 70rpx;display: flex;flex-direction: row;justify-content: space-between;border-top: 1px solid #eee;
+}
+.zhi-te1{font-size: 22rpx;color: #333;}
+.zhi-te2{font-size: 28rpx;color: #ee6817;}
+
+.car-m2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.car-m3{
+    width: 60rpx;height: 60rpx;
+    background: url('https://jingcheng668.com/static/8-1.png')no-repeat left;
+    background-size:70%;
+    margin-right: 20rpx;
+}
+.car-m3on{
+    background: url('https://jingcheng668.com/static/8-4.png')no-repeat left;
+    background-size:70%;
+}
+.car-m4 {
+    width: 60rpx;
+    height: 35rpx;
+}
+
+.car-m4 image {
+    width: 60rpx;
+    height: 60rpx;
+    /* margin-top: 15rpx; */
+}
+
+.car-m5 {
+    display: flex;
+    flex-direction: column;
+    width: 400rpx;
+    padding-left: 20rpx;
+    position: relative;
+}
+.car-m6{width: 150rpx;height: 65rpx;line-height: 65rpx;}
+.car-m6 text{font-size: 20rpx;color: #ee6817;float: left;}
+.car-m6 image{width: 33rpx;height: 40rpx;margin-top: 12rpx;float: right;}
+.tubiao{position: absolute;right: 50rpx;top: 13rpx;width: 33rpx;height: 40rpx;}
+.tubiao image{width: 33rpx;height: 40rpx;}
+
+.car-m5-te1 {
+    line-height: 35rpx;
+    height: 35rpx;
+    width: 100%;
+    overflow: hidden;
+    font-size: 22rpx;
+    color: #333;
+}
+
+.car-m5-te2 {
+    line-height: 30rpx;
+    height: 30rpx;
+    width: 100%;
+    overflow: hidden;
+    font-size: 22rpx;
+    color: #666;
+}
+
+.car-t1 {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 160rpx;
+}
+
+.car-t2 {
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #333;
+    display: flex;
+    background: #fff;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.car-t2 image {
+    width: 30rpx;
+    height: 30rpx;
+    margin-right:10rpx;
+    margin-top:18rpx;
+
+}
+
+.mem-m6 {
+    height: 100rpx;
+    width: 100%;
+    background: #ee6817;
+    font-size: 30rpx;
+    color: #fff;
+    line-height: 100rpx;
+    text-align: center;
+}
+.diandi{height: 160rpx;width: 100%;}

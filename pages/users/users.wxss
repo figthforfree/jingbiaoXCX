@@ -1,0 +1,255 @@
+/* pages/users/users.wxss */
+
+page {
+    background: #eee;
+}
+
+.users-top {
+    height: 310rpx;
+    width: 710rpx;
+    padding: 0 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    background: #fff;
+}
+
+.users-top1 {
+    font-size: 24rpx;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100rpx;
+    margin-top: 95rpx;
+}
+
+.users-top2 {
+    font-size: 24rpx;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 140rpx;
+    margin-top: 50rpx;
+}
+
+.users-top2 image {
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 50%;
+}
+
+.users-top3 {
+    font-size: 24rpx;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100rpx;
+    margin-top: 95rpx;
+}
+
+.users-m1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+}
+
+.users-m1-1 {
+    width: 20%;
+    height: 130rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+}
+
+.users-m1-1 image {
+    width: 60rpx;
+    height: 60rpx;
+    margin-top: 15rpx;
+}
+
+.users-m2 {
+    height: 70rpx;
+    background: #fff;
+    padding: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 94.5%;
+}
+
+.users-m2-1 {
+    font-size: 24rpx;
+    color: #333;
+    line-height: 70rpx;
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+}
+
+.users-m2-1 image {
+    width: 60rpx;
+    height: 60rpx;
+    margin-top: 5rpx;
+}
+
+.users-m2-2 image {
+    width: 16rpx;
+    height: 30rpx;
+    margin-top: 20rpx;
+}
+
+.users-m3 {
+    padding: 20rpx;
+    background: #fff;
+    margin: 10rpx 0;
+    width: 710rpx;
+}
+
+.users-m3-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.users-m3-1 image {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.users-m3-3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.users-m3-te1 {
+    font-size: 24rpx;
+    color: #333;
+    line-height: 60rpx;
+    font-weight: 700;
+}
+
+.users-m3-te2 {
+    width: 90rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    border-radius: 5rpx;
+    border: 1px solid #ee6817;
+    color: #ee6817;
+    font-size: 22rpx;
+    text-align: center;
+}
+
+.users-m3-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10rpx;
+}
+
+.users-m3-4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.users-m3-6 image {
+    width: 105rpx;
+    height: 105rpx;
+}
+
+.users-m3-7 {
+    width: 550rpx;
+    margin-left: 20rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.users-m3-te3 {
+    font-size: 24rpx;
+    color: #333;
+    font-weight: 700;
+    height: 35rpx;
+    overflow: hidden;
+    width: 100%;
+}
+
+.users-m3-te4 {
+    font-size: 22rpx;
+    color: #666;
+    height: 35rpx;
+    overflow: hidden;
+    width: 100%;
+}
+
+.users-m3-te5 {
+    font-size: 20rpx;
+    color: #ee6817;
+    height: 35rpx;
+    overflow: hidden;
+    width: 100%;
+}
+
+.users-m3-5 image {
+    width: 16rpx;
+    height: 30rpx;
+    margin-top: 20rpx;
+}
+
+.users-m4 {
+    background: #fff;
+    margin-bottom: 10rpx;
+    width: 100%;
+}
+
+.users-m5 {
+    height: 85rpx;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20rpx;
+    border-top: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.users-m5-1 {
+    font-size: 24rpx;
+    color: #333;
+    line-height: 85rpx;
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+}
+
+.users-m5-1 image {
+    width: 60rpx;
+    height: 60rpx;
+    margin-top: 12rpx;
+}
+
+.users-m5-2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.users-m5-2 image {
+    width: 16rpx;
+    height: 30rpx;
+    margin-top: 27rpx;
+    margin-left: 10rpx;
+}
+
+.users-m5-2 text {
+    font-size: 20rpx;
+    color: #999;
+    line-height: 85rpx;
+}

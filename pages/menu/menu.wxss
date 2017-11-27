@@ -1,0 +1,101 @@
+/* pages/menu/menu.wxss */
+
+.main {
+    background-color: #fff;
+    display: flex;
+}
+.jing-xmain{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.pro-left {
+    width: 33%;
+    height: 100%;
+    background-color: #f2f7fd;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.pro-left-1 {
+    width: 100%;
+    height: 90rpx;
+    text-align: center;
+    font-size: 28rpx;
+    color: #333;
+    border-bottom: 1px solid #ececec;
+}
+
+.pro-left-2 {
+    height: 90rpx;
+    width: 100%;
+    line-height: 90rpx;
+}
+
+.pro-on {
+    background-color: #fff;
+    border-left: 6px solid #ee6817;
+    box-sizing: border-box;
+}
+
+.proicon1 {
+    display: inline-block;
+    width: 29rpx;
+    height: 29rpx;
+}
+
+.pro-right {
+    width: 67%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pro-right2 {
+    width: 67%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+.pro-right1{
+    display: flex;
+    flex-direction: column;
+}
+.pro-right1-1{text-align: center;font-size: 26rpx;}
+.pro-right1-2{display: flex;flex-direction: row;justify-content: space-between;flex-wrap: wrap;}
+
+.menu-li1 {
+    width: 120rpx;
+    height: 160rpx;
+    overflow: hidden;
+    text-align: center;
+    padding: 20rpx;
+}
+
+.menu-img1 {
+    width: 120rpx;
+    height: 120rpx;
+    text-align: center;
+}
+
+.menu-img1 image {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+}
+
+.menu-li1 text {
+    font-size: 24rpx;
+    color: #333;
+    line-height: 40rpx;
+}
+
+

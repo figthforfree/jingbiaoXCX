@@ -1,0 +1,100 @@
+<!--pages/product/product.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{goodsDetailimg}}">
+        <swiper-item>
+            <image src="{{url}}{{item.path}}" class="slide-image" width="750" height="338" />
+        </swiper-item>
+    </block>
+</swiper>
+<view class='container'>
+    <view class='pro-main'>
+        <view class='pro-m1'>
+            <text class='pro-te1'>{{goodsDetail.title}}</text>
+            <text class='pro-te3'>{{goodsDetail.desc}}</text>
+            <view class='pro-m2'>
+                <view class='pro-m2-1'>
+                    ￥{{price}}<text>运费：{{goodsDetail.freight}}</text>
+                </view>
+                <view class='firm-m2-shu'>
+                    <view class='firm-shu-jian' bindtap='minusCount'>-</view>
+                    <view class='firm-shu-zhi'>{{num}}</view>
+                    <view class='firm-shu-jia' bindtap='addCount'>+</view>
+                </view>
+            </view>
+        </view>
+        <view class='pro-m3' wx:if="{{!noformat}}" bindtap='onshowstate'>
+            <view class='pro-m3-1'>已选 {{show_sel_value}}</view>
+            <view class='pro-m3-2' wx:if="{{showView == true}}"><image src='{{url}}/static/2-6.png'></image></view>
+            <view class='pro-m3-2' wx:if="{{showView == false}}"><image src='{{url}}/static/2-7.png'></image></view>
+        </view>
+        <view class="pro-m4 {{showView?'':'show'}}">
+        <view class="commodity_attr_list">
+          <view class="attr_box" wx:for="{{attrValueList}}" wx:for-item="attrValueObj" wx:for-index="attrIndex">
+            <view class="attr_name">{{attrValueObj.attrKey}}</view>
+            <view class="attr_value_box">
+              <view class="attr_value {{attrIndex==firstIndex || attrValueObj.attrValueStatus[valueIndex]?(value==attrValueObj.selectedValue?'attr_value_active':''):'attr_value_disabled'}}" bindtap="selectAttrValue" data-status="{{attrValueObj.attrValueStatus[valueIndex]}}"
+              data-value="{{value}}" data-key="{{attrValueObj.attrKey}}" data-index="{{attrIndex}}" data-selectedvalue="{{attrValueObj.selectedValue}}" wx:for="{{attrValueObj.attrValues}}" wx:for-item="value" wx:for-index="valueIndex">{{value}}</view>
+            </view>
+          </view>
+        </view>
+        </view>
+       
+        <view class='store_x-m4'>
+            <view class='store_x-m5'>全部评价
+                <text>（{{goodsDetail.comment_count}}）</text>
+            </view>
+
+            <view class='store-pl' wx:if="{{commentlist}}" wx:for="{{commentlist}}">
+                <view class='store_x-m6'>
+                    <view class='store_x-m6-1'>
+                        <image src='{{item.headimg}}'></image>
+                        <view class='store_x-m6-2'>
+                            <image src='{{url}}/static/2-10.png'></image>
+                        </view>
+                    </view>
+                </view>
+                <view  class='store_x-m7'>
+                    <view class='store_x-m8'>
+                        {{item.phone}}
+                    </view>
+                    <view class='store_x-m9'>{{item.content}}</view>
+                    <view class='store_x-m10' wx:if="{{item.imgs[0]}}" >
+                        <image wx:for="{{item.imgs}}" wx:for-item="v" src='{{url}}{{v}}'></image>
+                    </view>
+                </view>
+            </view>
+            <view class='store-x-m11' bindtap='getMoreComment' wx:if="{{flag}}">查看更多评论</view>
+        </view>
+
+        <view class='pro-m5'>
+            <view class="{{selected?'active':'pro-m5-1'}}" bindtap="selected">商品介绍</view>
+            <view class="{{selected1?'active':'pro-m5-1'}}" bindtap="selected1">规格参数</view>
+            <view class="{{selected2?'active':'pro-m5-1'}}" bindtap="selected2">售后保障</view>
+        </view>
+        <view class="pro-m5-0 {{selected?'show1':'hidden'}}">
+            <template is="wxParse" data="{{wxParseData:contents.nodes}}" />
+        </view>
+        <view class="pro-m5-0 {{selected1?'show1':'hidden'}}">{{goodsDetail.spec_content}}</view>
+        <view class="pro-m5-0 {{selected2?'show1':'hidden'}}">
+            <template is="wxParse" data="{{wxParseData:after_sale.nodes}}" />
+        </view>
+    </view>
+
+    <view class='diandiwu'></view>
+    <view class='pro-bottom'>
+        <navigator url="/pages/cart/cart" class='pro-bottom1'>
+            <view><image src='{{url}}/static/cart.png'></image></view>
+            <text>购物车</text>
+            <view class='cart_s' wx:if="{{cartnum}}">{{cartnum}}</view>
+        </navigator>
+        <view class='pro-bottom3'>
+            <button plain='true' hover-class='none' open-type='contact' class="contact">
+                <image src='{{url}}/static/2-14.png'></image>
+                <view class="text"><text>在线客服</text></view>
+            </button>
+        </view>
+        <view bindtap="gocart"  class='pro-bottom2'>加入购物车</view>
+        <view bindtap="submit"  class='pro-bottom21'>立即购买</view>
+    </view>
+</view>

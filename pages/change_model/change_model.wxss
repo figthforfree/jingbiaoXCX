@@ -1,0 +1,18 @@
+/* pages/change_model/change_model.wxss */
+.change-wu{width: 100%; border-top: 1px solid #eee;padding-top: 235rpx;text-align: center;display: flex;flex-direction: column;}
+.change-wu image{width: 390rpx;height: 445rpx;}
+.change-wu text{font-size: 30rpx;color: #666;}
+.change-m1{width: 100%; border-top: 1px solid #eee;}
+.change-m2{border-bottom: 1px solid #eee;display: flex;flex-direction: row;justify-content: space-between;padding: 20rpx;}
+.change-m2-1{width: 10%;}
+.change-m2-1 image{width: 60rpx;height: 60rpx;margin-top: 5rpx;}
+.change-m2-2{width: 80%;}
+.change-te1{font-size: 22rpx;color: #333;font-weight: 700;display: block;line-height: 30rpx;}
+.change-te2{font-size: 22rpx;color: #666;display: block;line-height: 30rpx;}
+.change-m2-3{width: 10%;text-align: right;}
+.change-m2-3 image{width: 39rpx;height: 39rpx;margin-top: 15rpx;}
+
+.car-t1{position: fixed;left:0;bottom:0;width: 100%;height: 160rpx;}
+.car-t2{height: 60rpx;line-height: 60rpx;text-align: center;font-size: 24rpx;color: #333;display: flex;flex-direction: row;justify-content: center;}
+.car-t2 image{width: 30rpx;height: 30rpx;margin-right: 10rpx;margin-top: 18rpx;}
+.mem-m6{height: 100rpx;width: 100%;background: #ee6817;font-size: 30rpx;color: #fff;line-height: 100rpx;text-align: center;}

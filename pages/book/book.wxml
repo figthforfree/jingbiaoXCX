@@ -1,0 +1,50 @@
+<!--pages/book/book.wxml-->
+<view class='container'>
+    <view class='book-m1'>
+        <navigator url='/pages/store_x/store_x?id={{StoreNamePath.id}}' open-type='navigateBack' hover-class='none' class='book-m2'>
+            <view class='book-m2-1'>
+                <image src='{{url}}{{StoreNamePath.path}}'></image>
+            </view>
+            <view class='book-m2-2'>
+                <view class='book-m2-3'>
+                    <text class='book-te1'>{{StoreNamePath.name}}</text>
+                    <!-- <text class='book-te2'>5.72km</text> -->
+                </view>
+                <view class='book-m2-4'>
+                    <view class='book-m2-5'>{{StoreNamePath.province}}{{StoreNamePath.city}}{{StoreNamePath.country}}</view>
+                    <view class='book-m2-6'><image src='{{url}}/static/1-7.png'></image></view>
+                </view>
+            </view>
+        </navigator>
+    </view>
+    <view class='book-m3'>
+        <navigator  url='/pages/mycar/mycar?leixing=1' hover-class='none' class='book-m1-a1'>
+            <text>{{car}}</text>
+            <image class='book-m1-a1-img' src='{{url}}/static/1-7.png'></image>
+        </navigator>
+        <navigator url='/pages/s_select/s_select?id={{mendianid}}' hover-class='none' class='book-m1-a1'>
+            <text>{{ser_name}}</text>
+            <image class='book-m1-a1-img' src='{{url}}/static/1-7.png'></image>
+        </navigator>
+        <picker class='book-m1-a1' mode="date" value="{{date}}" start="2017-10-01" end="2030-09-01" bindchange="bindDateChange">
+            <view class="picker">
+                <text>{{date}}</text>
+                <image class='book-m1-a1-img' src='{{url}}/static/1-7.png'></image>
+            </view>
+        </picker>
+        <picker class='book-m1-a1' mode="time" value="{{time}}" start="00:00" end="24:00" bindchange="bindTimeChange">
+            <view class="picker">
+                <text>{{time}}</text>
+                <image class='book-m1-a1-img' src='{{url}}/static/1-7.png'></image>
+            </view>
+        </picker>
+    </view>
+
+    <view class='car-t1'>
+        <view class='car-t2'>
+            <view><image src='{{url}}/static/8-2.png'></image></view>
+            <text>请完成预约信息</text>
+        </view>
+        <view bindtap='addresv' class='mem-m6'>确认预约</view>
+    </view>
+</view>

@@ -1,0 +1,25 @@
+<!--pages/mem_bind_re/mem_bind_re.wxml-->
+<view class='container'>
+    <view class='men-top'>
+        <view><image wx:if="{{userinfo.headimg}}" src='{{userinfo.headimg}}'></image></view>
+        <text>{{userinfo.nickname}}</text>
+    </view>
+    <view class='men-m0'>
+        <view class='men-m1'>
+            <text class='men-te2'>手机号</text>
+            <text wx:if="{{phone_low}}">{{phone_low}}</text>
+            <input wx:else type='number' bindinput='getphone' class='men-in1' placeholder-class="in1pl" placeholder='请输入手机号码'></input>
+        </view>
+        <view class='men-m1' wx:if="{{phone_low==''}}">
+            <view class='men-m3'><text class='men-te2'>验证码</text><input type='text' bindinput='getsms' class='men-in2' placeholder-class="in1pl" placeholder='请输入验证码'></input></view>
+            <text class="men-te1 {{selected1?'':'hidden'}}" bindtap='getyzm'>获取验证码</text>
+            <text class="men-te1 {{selected?'':'hidden'}}">{{second}}s后重新获取</text>
+        </view>
+        <view class='men-m2' wx:if="{{phone_low==''}}">
+            <view  bindtap='select' class='men-m2-a1'>立即绑定</view>
+        </view>
+        <view class='men-m2' wx:if="{{phone_low}}">
+            <view  bindtap='selects' class='men-m2-a1'>更改绑定</view>
+        </view>
+    </view>
+</view>

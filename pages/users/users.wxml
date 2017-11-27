@@ -1,0 +1,125 @@
+<!--pages/users/users.wxml-->
+<view class='container'>
+    <view class='users-top' style='background:#fff url({{url}}/static/9-1.png)no-repeat center;background-size:100%;'>
+        <view class='users-top1'>
+            <text>{{userinfo.score}}</text>
+            <text>我的积分</text>
+        </view>
+        <view class='users-top2'>
+            <image wx:if="{{userinfo.headimg}}" src='{{userinfo.headimg}}'></image>
+            <text>{{userinfo.nickname}}</text>
+        </view>
+        <view class='users-top3'>
+            <text>lv{{userinfo.level}}</text>
+            <text>我的等级</text>
+        </view>
+    </view>
+    <view class='users-m1'>
+        <navigator url='/pages/myorder/myorder?status=0' hover-class='none' class='users-m1-1'>
+            <view><image src='{{url}}/static/9-3.png'></image></view>
+            <text>全部订单</text>
+        </navigator>
+        <navigator url='/pages/myorder/myorder?status=1' hover-class='none' class='users-m1-1'>
+            <view><image src='{{url}}/static/9-4.png'></image></view>
+            <text>待付款</text>
+        </navigator>
+        <navigator url='/pages/myorder/myorder?status=2' hover-class='none' class='users-m1-1'>
+            <view><image src='{{url}}/static/9-5.png'></image></view>
+            <text>待发货</text>
+        </navigator>
+        <navigator url='/pages/myorder/myorder?status=3' hover-class='none' class='users-m1-1'>
+            <view><image src='{{url}}/static/9-6.png'></image></view>
+            <text>待收货</text>
+        </navigator>
+        <navigator url='/pages/myorder/myorder?status=4' hover-class='none' class='users-m1-1'>
+            <view><image src='{{url}}/static/9-6.png'></image></view>
+            <text>待评价</text>
+        </navigator>
+    </view>
+    <navigator url='/pages/address/address' hover-class='none' class='users-m2'>
+        <view class='users-m2-1'>
+            <image src='{{url}}/static/9-7.png'></image><text>收货地址</text>
+        </view>
+        <view class='users-m2-2'>
+            <image src='{{url}}/static/9-14.png'></image>
+        </view>
+    </navigator>
+    <navigator url='/pages/books/books' hover-class='none' class='users-m3'>
+        <view class='users-m3-1'>
+            <view class='users-m3-3'><image src='{{url}}/static/9-8.png'></image><text  class='users-m3-te1'>我的预约</text></view>
+            <view wx:if="{{getOneReservation}}">
+                <text wx:if="{{getOneReservation.status == 1}}" class='users-m3-te2'>未接受预约</text>
+                <text wx:if="{{getOneReservation.status == 2}}" class='users-m3-te2'>已接受预约</text>
+                <text wx:if="{{getOneReservation.status == 3}}" class='users-m3-te2'>拒绝预约</text>
+                <text wx:if="{{getOneReservation.status == 4}}" class='users-m3-te2'>预约完成</text>
+            </view>
+        </view>
+        <view wx:if="{{getOneReservation}}"  class='users-m3-2'>
+            <view class='users-m3-4'>
+                <view class='users-m3-6'>
+                    <image src='{{url}}{{getOneReservation.spath}}'></image>
+                </view>
+                <view class='users-m3-7'>
+                    <text class='users-m3-te3'>{{getOneReservation.name}}</text>
+                    <text class='users-m3-te4'>{{getOneReservation.address}}</text>
+                    <text class='users-m3-te5'>预约时间：{{getOneReservation.appointment}}</text>
+                </view>
+            </view>
+            <view class='users-m3-5'>
+                <image src='{{url}}/static/9-14.png'></image>
+            </view>
+        </view>
+    </navigator>
+    <view class='users-m4'>
+        <view bindtap='gobind' hover-class='none' class='users-m5'>
+            <view class='users-m5-1'>
+                <image src='{{url}}/static/9-9.png'></image><text>会员绑定</text>
+            </view>
+            <view class='users-m5-2'>
+                <image src='{{url}}/static/9-14.png'></image>
+            </view>
+        </view>
+        <navigator url='/pages/integral/integral' hover-class='none' class='users-m5'>
+            <view class='users-m5-1'>
+                <image src='{{url}}/static/9-10.png'></image><text>积分明细</text>
+            </view>
+            <view class='users-m5-2'>
+                <image src='{{url}}/static/9-14.png'></image>
+            </view>
+        </navigator>
+        <view bindtap="gomycar" class='users-m5'>
+            <view class='users-m5-1'>
+                <image src='{{url}}/static/9-11.png'></image><text>我的爱车</text>
+            </view>
+            <view class='users-m5-2'>
+                <image src='{{url}}/static/9-14.png'></image>
+            </view>
+        </view>
+        <view bindtap="gomyspread" class='users-m5'>
+            <view class='users-m5-1'>
+                <image src='{{url}}/static/yq.png'></image><text>我的推广</text>
+            </view>
+            <view class='users-m5-2'>
+                <image src='{{url}}/static/9-14.png'></image>
+            </view>
+        </view>
+    </view>
+    <view class='users-m4'>
+        <navigator url='/pages/about/about' class='users-m5'>
+            <view class='users-m5-1'>
+                <image src='{{url}}/static/9-12.png'></image><text>关于京骉车宝</text>
+            </view>
+            <view class='users-m5-2'>
+                <text>v1.1.1</text><image src='{{url}}/static/9-14.png'></image>
+            </view>
+        </navigator>
+        <view bindtap='callph' data-phone="{{commonData.phone}}" class='users-m5'>
+            <view class='users-m5-1'>
+                <image src='{{url}}/static/9-13.png'></image><text>客服电话</text>
+            </view>
+            <view class='users-m5-2'>
+                <text>{{commonData.phone}}</text><image src='{{url}}/static/9-14.png'></image>
+            </view>
+        </view>
+    </view>
+</view>

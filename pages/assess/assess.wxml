@@ -1,0 +1,16 @@
+<!--pages/assess/assess.wxml-->
+<view class='pingjia-main'>
+    <view class='pingjiaimg'>
+        <view class='pingjia-top'>
+            <view class='pingjiaimg-m1' bindtap='uploadimg'>+</view>
+            <text class='tishi-te1'>晒图赚取更多积分！</text>
+        </view>
+        <view wx:if="{{path}}" wx:for="{{path}}"  class='pingjiaimg-main'>
+            <image class='pingjiaimg-img1' src="{{url}}{{item}}"></image>
+        </view>
+    </view>
+    <textarea bindinput='getpl' class='pingjia-m1'></textarea>
+    <view class='pingjia-tj'>
+        <view class='pingjia-m2' bindtap='submitpinglun'>提交评价</view>
+    </view>
+</view>

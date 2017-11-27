@@ -1,0 +1,114 @@
+<!--pages/myorder/myorder.wxml-->
+<view class='container'>
+    <view class='order-m1'>
+        <view class="order-m1-1 {{status == 0?'order-on':''}}" bindtap='getordertype' data-status="0">
+            全部
+        </view>
+        <view class="order-m1-1 {{status == 1?'order-on':''}}" bindtap='getordertype' data-status="1">
+            待付款
+        </view>
+        <view class="order-m1-1 {{status == 2?'order-on':''}}" bindtap='getordertype' data-status="2">
+            待发货
+        </view>
+        <view class="order-m1-1 {{status == 3?'order-on':''}}" bindtap='getordertype' data-status="3">
+            待收货
+        </view>
+        <view class="order-m1-1 {{status == 4?'order-on':''}}" bindtap='getordertype' data-status="4">
+            待评价
+        </view>
+    </view>
+<!--待付款-->
+    <view class='order-m00'>
+        <block wx:for="{{orderlist}}" wx:for-index="i" wx:for-item="v">
+            <view class='order-m2'>
+                <view class='order-m3'>
+                    <text class='order-te1'>订单编号：{{v.order_num}}</text>
+                    <text class='order-te2' wx:if="{{v.order_status == 1}}">待付款</text>
+                    <text class='order-te2' wx:if="{{v.order_status == 2}}">等待发货</text>
+                    <text class='order-te2' wx:if="{{v.order_status == 3}}">等待收货</text>
+                    <text class='order-te2' wx:if="{{v.order_status == 4 && v.is_comment == 0}}">待评价</text>
+                    <text class='order-te2' wx:if="{{v.order_status == 4 && v.is_comment == 1}}">已完成</text>
+                    <text class='order-te2' wx:if="{{v.order_status == 5}}">已退款</text>
+                </view>
+                <block wx:for="{{orderlist[i].info}}">
+                    <navigator url='/pages/myorder_x/myorder_x?order_id={{v.order_id}}' class='order-m4' >
+                        <view class='order-m6'>
+                            <image src='{{url}}{{item.path}}'></image>
+                        </view>
+                        <view class='order-m7'>
+                            <text class='order-te3'>{{item.gname}}</text>
+                            <text class='order-te4' wx:if='{{item.spec}}'>{{item.spec}}</text>
+                            <text class='order-te4' >{{item.num}}件</text>
+                        </view>
+                        <view class='order-m9' wx:if='{{item.is_spike}}'>
+                            ￥{{item.spike_price}}
+                        </view>
+                        <view class='order-m9' wx:if='{{!item.is_spike}}'>
+                            ￥{{item.price}}
+                        </view>
+                    </navigator>
+                </block>
+                
+                <view class='order-m5'>
+                    <view class='order-jiade'>
+                        <view wx:if="{{v.order_status != 2 && v.order_status != 3}}" class='order-te2' bindtap='delOrder' data-id="{{v.order_id}}" data-index="{{i}}"><image src='{{url}}/static/9-25.png'></image>
+                        </view>
+                        <view class='order-v1'>共{{v.num}}件，合计：</view>
+                        <view class='order-v2'>￥{{v.order_amount}}</view>
+                        <view class='order-a1' data-id="{{v.order_id}}" bindtap="pay" wx:if="{{v.order_status == 1}}">立即支付</view>
+                        <view class='order-a1' data-id="{{v.order_id}}" bindtap='confirm' wx:if="{{v.order_status == 3}}">确认收货</view>
+                        <view class='order-a1' data-id="{{v.order_id}}" bindtap='gopingjia' wx:if="{{v.order_status == 4 && v.is_comment == 0}}">去评价</view>
+                    </view>
+                </view>
+                
+            </view>
+        </block>
+        <view wx:if="{{!orderlist[0]}}" class='order-m2'>
+            <text class='tishixinxi'>暂无数据信息</text>
+        </view>
+    </view>
+<!--待收货-->
+     <!-- <view class='order-m2'>
+        <view class='order-m3'>
+            <text class='order-te1'>订单编号：TH152123544</text>
+            <text class='order-te5'>等待收货</text>
+        </view>
+        <view class='order-m3-1'>
+            <view class='order-m3-2'><image src='{{url}}/static/9-23.png'></image></view>
+            <view class='order-m3-3'>
+                <view>福建晋江分拨中心】在福建晋江分拨中心进行装车扫描即将发往：广东深圳</view>
+                <text>2017-08-28  00:13:53</text>
+            </view>
+        </view>
+        <view class='order-m4-1'>
+            <view class='order-m6'>
+                <image src='{{url}}/static/6-1.png'></image>
+            </view>
+            <view class='order-m7'>
+                <text class='order-te3'>米其林轮胎浩悦PRIMACY</text>
+                <text class='order-te4'>共1件</text>
+            </view>
+        </view>
+        <view class='order-m5'>
+            <navigator class='order-a1 pddt20'>确认收货</navigator>
+        </view>
+    </view>
+
+    <view class='order-m2'>
+        <view class='order-m3'>
+            <text class='order-te1'>订单编号：TH152123544</text>
+            <view class='order-te2'><image src='{{url}}/static/9-25.png'></image></view>
+        </view>
+        <view class='order-m4'>
+            <view class='order-m6'>
+                <image src='{{url}}/static/6-1.png'></image>
+            </view>
+            <view class='order-m7'>
+                <text class='order-te3'>米其林轮胎浩悦PRIMACY</text>
+                <text class='order-te4'>共1件</text>
+            </view>
+        </view>
+        <view class='order-m8'><image src='{{url}}/static/9-24.png'></image></view>
+    </view>  -->
+
+</view>

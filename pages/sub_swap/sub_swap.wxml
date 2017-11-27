@@ -1,0 +1,24 @@
+<!--pages/sub_insurance/sub_insurance.wxml-->
+<view class='sub-inmain'>
+  <form bindsubmit="formSubmit" wx:if="{{tableshow}}">
+    <view class='sub-inm1'>
+        <block wx:for="{{tabledata}}" wx:for-index="i" wx:for-item="v">  
+            <view class='sub-in1'>
+                <text class='sub-inte1'>{{v.name}}</text>
+                <input wx:if="{{v.type == 'text'}}" class='sub-inin1' type='text' name="{{v.name_en}}" placeholder='请输入{{v.name}}'></input>
+                <input  wx:if="{{v.type == 'code'}}"  class='sub-inin2' type='number' name="{{v.name_en}}" placeholder='请输入{{v.name}}' ></input>
+                <input wx:if="{{v.type == 'yzm'}}" class='sub-inin2' placeholder='请输入{{v.name}}' name='{{v.name_en}}'></input>
+                <button wx:if="{{v.type == 'yzm' && selected1}}" data-name="{{v.name_en}}" class='sub-bu1' formType="submit" data-type="sms">获取验证码</button>
+                 <button wx:if="{{v.type == 'yzm' && selected}}" data-name="{{v.name_en}}" class='sub-bu1' >{{second}}s后重新获取</button>
+                <!-- <text wx:if="{{v.type == 'yzm'}}" data-name="{{v.name_en}}" bindtap='sendsms' class='sub-bu1'>获取验证码</text> -->
+                <input wx:if="{{v.type == 'vehicle'}}" bindtap='choseCar' class='sub-inin2' placeholder='请选择{{v.name}}' value="{{car_name}}"></input>
+                <input wx:if="{{v.type == 'vehicle'}}" class='sub-inin2 hidden' name='{{v.name_en}}'  value='{{car_id}}'></input>
+                <image wx:if="{{v.type == 'vehicle'}}" class='jing-m1-img2' src='{{url}}/static/1-7.png'></image>
+            </view>
+        </block>
+        
+    </view>
+    <button class='sub-inm2' formType="submit" data-type="sub">提交信息</button>
+  </form>
+  <view style='text-align:center;padding-top:35rpx;' wx:if='{{!tableshow}}'>暂未提供表单</view>
+</view>

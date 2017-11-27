@@ -1,0 +1,37 @@
+<!--pages/products/products.wxml-->
+<view class='container'>
+    <view class='pros-main'>
+        <view class='pros-m0'>
+            <view wx:if="{{keyword}}" class='pros-m1'>
+                <view class='pros-m1-1'>
+                    <text>{{keyword}}</text>
+                    <image src='{{url}}/static/5-5.png'></image>
+                </view>
+            </view>
+            <view class='pros-m2'>
+                <view class='pros-m2-1 {{sale_asc != 0  ? "redc" : ""}}'  bindtap='paixu1' data-status="{{sale_asc}}">销量</view>
+                <view class='pros-m2-2 {{price_asc != 0  ? "redc" : ""}}' bindtap='paixu2' data-status="{{price_asc}}">
+                    <text>价格</text>
+                    <image wx:if="{{price_asc == 1}}" src='{{url}}/static/5-7.png'></image>
+                    <image wx:if="{{price_asc == 2}}" src='{{url}}/static/5-8.png'></image> 
+                </view>
+            </view>
+        </view>
+        <view class="pros-m3 {{keyword !=''?'pros-m3-on2':'pros-m3-on1'}}">
+            <block wx:for="{{goodsList}}" wx:for-index="i" wx:for-item="v" >
+                <navigator url='/pages/product/product?g_id={{v.g_id}}' hover-class='none' class='pros-m3-1'>
+                    <view class='pros-m3-2'><image src='{{url}}{{v.path}}'></image></view>
+                    <view class='pros-m3-3'>
+                        <text class='pros-te1'>{{v.title}}</text>
+                        <view class='pros-te2'>￥{{v.price}}<text>月销售{{v.month_sales_num}}笔</text></view>
+                    </view>
+                </navigator>
+            </block>
+
+            <view wx:if="{{!goodsList[0]}}" class='pros-m3-1'>
+                <text class='pros-m3-1-te1'>暂无商品···</text>
+            </view>
+           
+        </view>
+    </view>
+</view>

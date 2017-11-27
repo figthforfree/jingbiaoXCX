@@ -1,0 +1,20 @@
+<!--pages/models_c/models_c.wxml-->
+<view class='container'>
+    <view class='select-m1'>
+        <image src='{{url}}{{brand.path}}'></image>
+        <text>{{brand.brand_name}}</text>
+    </view>
+    <view class='select-m2'>
+        <text class='models-te1'>{{pl_name}}</text>
+        <image src='{{url}}/static/7-11.png'></image>
+        <text class='models-te1'>{{nf_name}}</text>
+        <image src='{{url}}/static/7-11.png'></image>
+        <text class='models-te2'>选择车型</text>
+    </view>
+    
+    <block wx:for="{{chekuan}}">
+        <view class='select-m3' bindtap='xuanding' data-id = "{{item.id}}">
+            <text>{{item.name}}</text>
+        </view>
+    </block>
+</view>

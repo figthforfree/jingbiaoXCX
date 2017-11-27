@@ -1,0 +1,72 @@
+<!--pages/store_x/store_x.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#fff">
+    <block wx:for="{{storeimg}}">
+        <swiper-item>
+            <image src="{{url}}{{item.path}}" class="slide-image" width="750" height="338" />
+        </swiper-item>
+    </block>
+</swiper>
+
+<view class='banner-fu' style='background:url({{url}}/static/4-2.png)no-repeat center;background-size:100%;'>营业时间 {{storeD.b_hour}}</view>
+<view class='banner-fu2'>{{storeimgi}}</view>
+
+
+<view class='container'>
+    <view class='store_x-m1'>
+        <view class='store_x-m2'>
+            <text class='store-m1-te1'>{{storeD.name}}</text>
+            <view class='store-m4'>
+                <text class='store-m1-te2'>总评价</text>
+                <text class='store-m1-te3'>{{storeD.e_num}}</text>
+                <text class='store-m1-te4'>总订单</text>
+                <text class='store-m1-te3'>{{storeD.o_num}}</text>
+            </view>
+            <view class='store-m4'>
+                <text class='store-m1-te5'>{{storeD.province}}{{storeD.city}}{{storeD.country}}{{storeD.address}}</text>
+            </view>
+        </view>
+        <view class='store_x-m3' bindtap="listenerBtnGetLocation">
+            <view>
+                <image src='{{url}}/static/4-4.png'></image>
+            </view>
+            <text class='store-m1-te6'>导航</text>
+
+        </view>
+    </view>
+    <view class='store_xx'>
+        <view class='store_x-m5'>门店详情
+
+        </view>
+        <template is="wxParse" data="{{wxParseData:contents.nodes}}" />
+    </view>
+    <view class='store_x-m4'>
+        <view class='store_x-m5'>全部评价
+            <text>（{{storeD.e_num}}）</text>
+        </view>
+
+        <view class='store-pl' wx:if="{{commentlist}}" wx:for="{{commentlist}}">
+            <view class='store_x-m6'>
+                <view class='store_x-m6-1'>
+                    <image src='{{item.headimg}}'></image>
+                    <view class='store_x-m6-2'>
+                        <image src='{{url}}/static/2-10.png'></image>
+                    </view>
+                </view>
+            </view>
+            <view class='store_x-m7'>
+                <view class='store_x-m8'>
+                    {{item.phone}}
+                </view>
+                <view class='store_x-m9'>{{item.content}}</view>
+                <view class='store_x-m10' wx:if="{{item.imgs[0]}}">
+                    <image wx:for="{{item.imgs}}" wx:for-item="v" src='{{url}}{{v}}'></image>
+                </view>
+            </view>
+        </view>
+        <view class='store-x-m11' bindtap='getMoreComment' wx:if="{{flag}}">查看更多评论</view>
+    </view>
+
+    <view class='diandi12'></view>
+    <view data-id='{{storeD.id}}' bindtap='bindser' class='yuyue'>立即预约</view>
+</view>
